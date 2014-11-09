@@ -1,24 +1,7 @@
 __author__ = 'ipetrash'
 
+
 """Модуль для создания документов FictionBook версии 2.0 (fb2)."""
-
-
-# <FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0"
-# xmlns:l="http://www.w3.org/1999/xlink">
-# <description>
-#     ...
-#   </description>
-#   <body>
-#     ...
-#   </body>
-#   <body name="notes">
-#     ...
-#   </body>
-#   <binary id="cover.jpg" content-type="image/jpeg">/9j/
-#     4AAQSkZJRgABAgAAZABkAAD/
-#     ...
-#   </binary>
-# </FictionBook>
 
 
 class Genre:
@@ -133,43 +116,6 @@ class Author:
 
 
 class Lang:
-    def __init__(self):
-        pass
-
-
-class Title_Info:
-    # Подчиненные элементы
-    # Должен содержать в перечисленном порядке:
-    # <genre> - 1..n (любое число, один обязaтелен);
-    # <author> - 1..n (любое число, один обязaтелен);
-    # <book-title> - 1 (один, обязателен);
-    # <annotation> - 0..1 (один, опционально);
-    # <keywords> - 0..1 (один, опционально);
-    # <date> - 0..1 (один, опционально);
-    # <coverpage> - 0..1 (один, опционально);
-    # <lang> - 1 (один, обязателен);
-    # <src-lang> - 0..1 (один, опционально);
-    # <translator> - 0..n (любое число, опционально);
-    # <sequence> - 0..n (любое число, опционально).
-
-    def __init__(self):
-        self.genre = [Genre()]
-        self.author = [Author()]
-        self.book_title = [Book_Title()]
-        self.annotation = None
-        self.keywords = None
-        self.date = None
-        self.coverpage = None
-        self.lang = Lang()
-        self.src_lang = None
-        self.translator = []
-        self.sequence = []
-
-    def get_source(self):
-        pass
-
-
-class Document_Info:
     """"""
 
     def __init__(self):
@@ -177,6 +123,61 @@ class Document_Info:
 
     def get_source(self):
         pass
+
+
+class Title_Info:
+    """"""
+
+
+    # Описание информации о произведении (с учетом перевода, но без учета издания).
+
+
+    def __init__(self):
+        self.genre = [Genre()]  # <genre> - 1..n (любое число, один обязaтелен);
+        self.author = [Author()]  # <author> - 1..n (любое число, один обязaтелен);
+        self.book_title = [Book_Title()]  # <book-title> - 1 (один, обязателен);
+        self.annotation = None  # <annotation> - 0..1 (один, опционально);
+        self.keywords = None  # <keywords> - 0..1 (один, опционально);
+        self.date = None  # <date> - 0..1 (один, опционально);
+        self.coverpage = None  # <coverpage> - 0..1 (один, опционально);
+        self.lang = Lang()  # <lang> - 1 (один, обязателен);
+        self.src_lang = None  # <src-lang> - 0..1 (один, опционально);
+        self.translator = []  # <translator> - 0..n (любое число, опционально);
+        self.sequence = []  # <sequence> - 0..n (любое число, опционально).
+
+    def get_source(self):
+        # TODO: доделать
+        source = '<title-info>'
+        source += '</title-info>'
+        return source
+
+
+class Document_Info:
+    """"""
+
+    # Описание информации о конкретном FB2.x документе (создатель(и), история и т.д.).
+    #
+    # Подчиненные элементы
+    # Содержит в перечисленном порядке элементы:
+    # <author> - 1..n (любое число, один обязaтелен);
+    # <program-used> - 0..1 (один, опционально);
+    # <date> - 1 (один, обязателен);
+    # <src-url> - 0..n (любое число, опционально);
+    # <src-ocr> - 0..1 (один, опционально);
+    # <id> - 1 (один, обязателен);
+    # <version> - 1 (один, обязателен);
+    # <history> - 0..1 (один, опционально);
+    # <publisher> - 0..n (любое число, опционально) с версии 2.2.
+
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        # TODO: доделать
+        source = '<document-info>'
+        source += '</document-info>'
+        return source
 
 
 class Publish_Info:
@@ -226,22 +227,132 @@ class Description:
         return source
 
 
-class Body:
+class Title:
     """"""
-
-    # <image> - 0..1 (один, опционально) - задается изображение
-    # для отображения в начале книги (или конкретного <body>);
-    # <title> - 0..1 (один, опционально) - задается заглавие
-    # для отображения в начале книги (или конкретного <body>);
-    # <epigraph> - 0..n (любое число, опционально) - задаются эпиграфы к книге;
-    # <section> - 1..n (любое число, один обязaтелен) - задаются
-    # части (главы, прочие структурные единицы) книги;
 
     def __init__(self):
         pass
 
     def get_source(self):
         pass
+
+
+class Image:
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
+
+class Title:
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
+
+class Epigraph:
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
+
+class Section:
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
+
+class Body:
+    """"""
+
+    # Атрибуты
+    # name - (опционально) - название <body>, устанавливается в "notes" для тела, содержащего сноски.
+    # xml:lang - (опционально) - задание языка для <body>
+    #
+    # Подчиненные элементы
+    # Содержит в перечисленном порядке следующие элементаы:
+    # <image> - 0..1 (один, опционально) - задается изображение для отображения в начале книги (или конкретного <body>);
+    # <title> - 0..1 (один, опционально) - задается заглавие для отображения в начале книги (или конкретного <body>);
+    # <epigraph> - 0..n (любое число, опционально) - задаются эпиграфы к книге;
+    # <section> - 1..n (любое число, один обязaтелен) - задаются части (главы, прочие структурные единицы) книги;
+    #
+    # Подчинен
+    # Может содержаться в следующих элементах:
+    # <FictionBook> (любое число, один обязaтелен)
+    #
+    # Описание
+    # Здесь собственно и находится текст книги.
+    # Хотя формально количество и порядок экземпляров <body> не ограничены, но для
+    # совместимости с существующим софтом рекомендуется:
+    # Помещать весь основной текст документа в первом <body> (сразу после <description>).
+    # При наличии в тексте сносок (<a type="note">) сам текст сносок должен размещаться во
+    # втором <body> с атрибутом name="notes".
+    # При наличии кроме сносок также комментариев и т.п., что в оригинале размещено в конце
+    # книги - создается третье <body> с атрибутом name="comments" или без атрибута name.
+    # При отсутствии сносок второе и третье <body> должно отсутствовать, а весь текст размещаться
+    # в первом.
+    #
+    # Пример использования
+    # <body name="notes">
+    #  <title><p>Примечания</p></title>
+    #  <section id="note1">
+    #   <title>
+    #    <p>1</p>
+    #   </title>
+    #   <p>Известный английский архитектор XVIII века, испытавший в
+    #   своем творчестве сильное влияние античной архитектуры. (Здесь и
+    #   далее прим. ред.)</p>
+    #  </section>
+    #  <section id="note2">
+    #   <title>
+    #    <p>2</p>
+    #   </title>
+    #   <p>Американский просветитель, живший в XVIII веке</p>
+    #  </section>
+    # </body>
+
+    def __init__(self):
+        self.name = None
+        self.lang = None
+        self.image = Image()
+        self.title = Title()
+        self.epigraph = []
+        self.section = [Section()]
+
+    def get_source(self):
+        name = ' name="{}"'.format(self.name) if self.name else ''
+        lang = ' xml:lang="{}"'.format(self.lang) if self.lang else ''
+        source = '<body{}{}>'.format(name, lang)
+
+        if self.image:
+            source += self.image.get_source()
+
+        if self.title:
+            source += self.title.get_source()
+
+        for e in self.epigraph:
+            source += e.get_source()
+
+        for s in self.section:
+            source += s.get_source()
+
+        source += '</body>'
+        return source
 
 
 class Binary:
