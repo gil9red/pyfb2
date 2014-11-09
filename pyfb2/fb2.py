@@ -21,6 +21,42 @@ __author__ = 'ipetrash'
 # </FictionBook>
 
 
+class Genre:
+    """Описывает жанровую принадлежность книги. Используется для помещения
+    книги в рубрикатор библиотеки, по этой причине список возможных жанров
+    жестко задается. Допускается указание нескольких жанров."""
+
+    # Атрибуты
+    # match (опциональный, значение по умолчанию "100") ? число от "1" до "100",
+    # задающее субъективное процентное соответствие данному жанру.
+    #
+    # Содержит текст - обозначение жанра из списка жанров.
+    # http://www.fictionbook.org/index.php/%D0%96%D0%B0%D0%BD%D1%80%D1%8B_FictionBook_2.1
+
+    # Пример:
+    # Вестерн с элементами детектива можно описать следующим образом:
+    # <genre>adv_western</genre>
+    # <genre match="20">detective</genre>
+
+    def __init__(self):
+        self.text = None
+        self.match = None
+
+
+class Book_Title:
+    def __init__(self):
+        pass
+
+class Author:
+    def __init__(self):
+        pass
+
+
+class Lang:
+    def __init__(self):
+        pass
+
+
 class Title_Info:
     # Подчиненные элементы
     # Должен содержать в перечисленном порядке:
@@ -37,7 +73,17 @@ class Title_Info:
     # <sequence> - 0..n (любое число, опционально).
 
     def __init__(self):
-        self.genre = list()
+        self.genre = [Genre()]
+        self.author = [Author()]
+        self.book_title = [Book_Title()]
+        self.annotation = None
+        self.keywords = None
+        self.date = None
+        self.coverpage = None
+        self.lang = Lang()
+        self.src_lang = None
+        self.translator = []
+        self.sequence = []
 
 
 class Document_Info:
@@ -62,7 +108,7 @@ class Description:
         self.title_info = Title_Info()
         self.document_info = Document_Info()
         self.publish_info = None
-        self.custom_info = list()
+        self.custom_info = []
 
     def get_source(self):
         return '<description>' + '</description>'
@@ -90,7 +136,7 @@ class FB2:
     def __init__(self):
         self.description = Description()  # Одно и только одно вхождение
         self.body = [Body()]  # Одно или более вхождений
-        self.binary = list()  # Любое число вхождений
+        self.binary = []  # Любое число вхождений
 
     def add_body(self):
         self.body.append(Body())
