@@ -262,11 +262,25 @@ class Binary:
     # id (обязателен) - Идентификатор ("имя файла", а точнее якорь) для ссылок
     # на данные (картинку).
 
+    # Пример использования
+    # <binary id="cover.jpg" content-type="image/jpeg">
+    # AQMAEAMDBgkAAA/tAAAe7gAANHz/2wCEAAgGBgYGBggGBggMCAcIDA4KCAgKDhANDQ4NDRAR
+    # DA4NDQ4MEQ8SExQTEg8YGBoaGBgjIiIiIycnJycnJycnJycBCQgICQoJCwkJCw4LDQsOEQ4O
+    # ...
+    # h9x8OJ/B/c+gfbXM/wDQ/qcPZ9HHjqaPi17zZ4+6deEYNxtP+H1v8Opsec//2Q==
+    # </binary>
+
     def __init__(self):
-        pass
+        self.id = None
+        self.content_type = None
+        self.data = None
 
     def get_source(self):
-        pass
+        # TODO: проверять значения атрибутов
+        source = '<binary id="{}" content-type="{}">'.format(self.id, self.content_type)
+        source += self.data
+        source += '</binary>'
+        return source
 
 
 class FB2:
