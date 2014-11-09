@@ -75,6 +75,12 @@ class Author:
     # <title-info> 1..n (любое число, один обязателен);
     # <src-title-info> 1..n (любое число, один обязателен) с версии 2.1;
     # <document-info> 1..n (любое число, один обязателен);
+    #
+    # Пример использования
+    # <author>
+    #   <first-name>Борис</first-name>
+    #   <last-name>Сергеев</last-name>
+    # </author>
 
     def __init__(self):
         self.first_name = None
@@ -85,6 +91,32 @@ class Author:
         self.email = None
         self.id = None
 
+    def get_source(self):
+        source = '<author>'
+
+        if self.first_name:
+            source += '<first-name>{}</first-name>'.format(self.first_name)
+
+        if self.middle_name:
+            source += '<middle-name>{}</middle-name>'.format(self.middle_name)
+
+        if self.last_name:
+            source += '<last-name>{}</last-name>'.format(self.last_name)
+
+        if self.nickname:
+            source += '<nickname>{}</nickname>'.format(self.nickname)
+
+        for hp in self.home_page:
+            source += '<home-page>{}</home-page>'.format(hp)
+
+        for e in self.email:
+            source += '<email>{}</email>'.format(e)
+
+        if self.id:
+            source += '<id>{}</id>'.format(self.id)
+
+        source += '</author>'
+        return source
 
 
 class Lang:
