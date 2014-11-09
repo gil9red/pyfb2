@@ -165,15 +165,39 @@ class Title_Info:
         self.translator = []
         self.sequence = []
 
+    def get_source(self):
+        pass
+
 
 class Document_Info:
-    pass
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
 
 class Publish_Info:
-    pass
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
 
 class Custom_Info:
-    pass
+    """"""
+
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
 
 class Description:
     # Поля раздела description:
@@ -191,11 +215,20 @@ class Description:
         self.custom_info = []
 
     def get_source(self):
-        return '<description>' + '</description>'
+        source = '<description>'
+        source += self.title_info.get_source()
+        source += self.document_info.get_source()
+        if self.publish_info:
+            source += self.publish_info.get_source()
+        for ci in self.custom_info:
+            source += ci.get_source()
+        source += '</description>'
+        return source
 
 
 class Body:
-    pass
+    """"""
+
     # <image> - 0..1 (один, опционально) - задается изображение
     # для отображения в начале книги (или конкретного <body>);
     # <title> - 0..1 (один, опционально) - задается заглавие
@@ -204,15 +237,40 @@ class Body:
     # <section> - 1..n (любое число, один обязaтелен) - задаются
     # части (главы, прочие структурные единицы) книги;
 
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
 
 class Binary:
-    pass
+    """"""
+
     # Не содержит подчиненных элементов.
     # Должен содержать текст, представляющий собой двоичные данные,
     # кодированные методом base64
 
+    def __init__(self):
+        pass
+
+    def get_source(self):
+        pass
+
 
 class FB2:
+    """"""
+
+    # Раздел FictionBook состоит из вложенных подразделов в указанном ниже порядке:
+    # <description> - который описывает заголовок документа. Одно и только одно вхождение.
+    # (фразы вроде "одно и только одно вхождение" говорят, сколько раз подряд может идти
+    # данный тэг в данном месте документа)
+    # <body> - описывает тело документа. Одно или более вхождений.
+    # <binary> - содержит приложенные к файлу двоичные объекты - картинки и прочее.
+    # Любое число вхождений.
+    # Иными словами, присутствуют как минимум разделы <description> с <body>, а
+    # остальное - по необходимости.
+
     def __init__(self):
         self.description = Description()  # Одно и только одно вхождение
         self.body = [Body()]  # Одно или более вхождений
@@ -229,6 +287,10 @@ class FB2:
         source_fb2 += ('<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" '
                        'xmlns:l="http://www.w3.org/1999/xlink">')
         source_fb2 += self.description.get_source()
+        for b in self.body:
+            source_fb2 += b.get_source()
+        for bi in self.binary:
+            source_fb2 += bi.get_source()
         source_fb2 += '</FictionBook>'
 
         from xml.dom.minidom import parseString
