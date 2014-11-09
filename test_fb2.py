@@ -1,4 +1,4 @@
-from pyfb2 import fb2
+import fb2
 
 __author__ = 'ipetrash'
 
