@@ -87,11 +87,24 @@ class Author:
         self.middle_name = None
         self.last_name = None
         self.nickname = None
-        self.home_page = None
-        self.email = None
+        self.home_page = []
+        self.email = []
         self.id = None
 
+    def add_home_page(self, value):
+        self.home_page.append(value)
+
+    def remove_home_page(self, value):
+        self.home_page.remove(value)
+
+    def add_email(self, value):
+        self.email.append(value)
+
+    def remove_email(self, value):
+        self.email.remove(value)
+
     def get_source(self):
+        # TODO: проверять наличие элементов
         source = '<author>'
 
         if self.first_name:
