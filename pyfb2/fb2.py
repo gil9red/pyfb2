@@ -44,10 +44,17 @@ class Title_Info:
         # Атрибуты
         # match (опциональный, значение по умолчанию "100") ? число от "1" до "100",
         # задающее субъективное процентное соответствие данному жанру.
+        #
         # Содержит текст - обозначение жанра из списка жанров.
+        # http://www.fictionbook.org/index.php/%D0%96%D0%B0%D0%BD%D1%80%D1%8B_FictionBook_2.1
+
+        # Пример:
+        # Вестерн с элементами детектива можно описать следующим образом:
+        # <genre>adv_western</genre>
+        # <genre match="20">detective</genre>
 
         def __init__(self):
-            self.value = None
+            self.text = None
             self.match = None
 
     pass
