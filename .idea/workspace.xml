@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6437b9bd-e657-41af-97de-10899e5ee378" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyfb2/fb2.py" afterPath="$PROJECT_DIR$/pyfb2/fb2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_fb2.py" afterPath="$PROJECT_DIR$/test_fb2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pyfb2.iws" />
@@ -27,22 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test_fb2.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="test_fb2.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_fb2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.31598514" vertical-offset="0" max-vertical-offset="269">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fb2.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyfb2/fb2.py">
+      <file leaf-file-name="fb2.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fb2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22869955" vertical-offset="2941" max-vertical-offset="7463">
-              <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4522">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="e#95#128#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,6 +64,13 @@
         <option value="$PROJECT_DIR$/pyfb2/genre.py" />
         <option value="$PROJECT_DIR$/test_fb2.py" />
         <option value="$PROJECT_DIR$/pyfb2/fb2.py" />
+        <option value="$PROJECT_DIR$/genre.py" />
+        <option value="$PROJECT_DIR$/author.py" />
+        <option value="$PROJECT_DIR$/document_info.py" />
+        <option value="$PROJECT_DIR$/book_title.py" />
+        <option value="$PROJECT_DIR$/lang.py" />
+        <option value="$PROJECT_DIR$/title_info.py" />
+        <option value="$PROJECT_DIR$/fb2.py" />
       </list>
     </option>
   </component>
@@ -118,20 +125,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyfb2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyfb2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyfb2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -143,6 +136,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\pyfb2" />
       <recent name="C:\Users\ipetrash\Projects\pyfb2\pyfb2" />
     </key>
   </component>
@@ -177,7 +171,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyfb2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyfb2/fb2.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\pyfb2\fb2.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="fb2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyfb2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fb2.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="title_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyfb2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/title_info.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -304,14 +334,18 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.test_fb2" />
       <item index="1" class="java.lang.String" itemvalue="Python.fb2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.fb2 (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.title_info" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.test_fb2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.fb2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fb2 (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.title_info" />
+        <item index="3" class="java.lang.String" itemvalue="Python.fb2" />
       </list>
     </recent_temporary>
   </component>
@@ -369,24 +403,60 @@
       <created>1415559116311</created>
       <updated>1415559116311</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Обновлен класс Binary.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415561290718</created>
+      <updated>1415561290718</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Добавлен модуль author.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562138409</created>
+      <updated>1415562138409</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Добавлен модуль book_title.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562154003</created>
+      <updated>1415562154003</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Добавлен модуль document_title.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562172798</created>
+      <updated>1415562172798</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Добавлен модуль genre.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562194905</created>
+      <updated>1415562194905</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Добавлен модуль lang.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562228176</created>
+      <updated>1415562228176</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Добавлен модуль title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562276845</created>
+      <updated>1415562276845</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562302222</created>
+      <updated>1415562302222</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415562311899</created>
+      <updated>1415562311899</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="966" height="616" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1400862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1400862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944812" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4556701" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38762885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -414,9 +484,16 @@
     <MESSAGE value="Добавлено описание для элемента жанр&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Элемент жанр перенесен в отдельный модуль.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Обновлено класс Author.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
-    <MESSAGE value="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Обновлен класс Binary.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновлен класс Binary.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль author.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль book_title.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль document_title.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль genre.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль lang.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Добавлен модуль title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -430,11 +507,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyfb2/fb2.py">
+    <entry file="file://$PROJECT_DIR$/fb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1683">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#95#128#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -446,26 +525,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyfb2/fb2.py">
+    <entry file="file://$PROJECT_DIR$/fb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1683">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#95#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_title.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/title_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3699187" vertical-offset="28" max-vertical-offset="663">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/document_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4522">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#95#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6319703" vertical-offset="0" max-vertical-offset="272">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_fb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyfb2/fb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22869955" vertical-offset="2941" max-vertical-offset="7463">
-          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.31598514" vertical-offset="0" max-vertical-offset="269">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
         </state>
       </provider>
