@@ -42,14 +42,49 @@ class Genre:
         self.text = None
         self.match = None
 
+    def get_source(self):
+        if not self.text:
+            raise NameError('Не определен жанр (self.text is None).')
+
+        if self.match:
+            return '<genre match="{}">{}</genre>'.format(self.match, self.text)
+        else:
+            return '<genre>{}</genre>'.format(self.text)
+
 
 class Book_Title:
     def __init__(self):
         pass
 
 class Author:
+    """Информация об авторе книги, если элемент используется в <title-info>
+    или <src-title-info>; или об авторе документа, если в <document-info>."""
+
+    # Подчиненные элементы
+    # Содержит в перечисленном порядке следующие элементы:
+    # <first-name> - 0..1 (один, обязателен при отсутствии <nickname>, иначе опционально) - имя;
+    # <middle-name> - 0..1 (один, опционально) - отчество;
+    # <last-name> - 0..1 (один, обязателен при отсутствии <nickname>, иначе опционально) - фамилия;
+    # <nickname> - 0..1 (один, обязателен при отсутствии <first-name> и <last-name>, иначе опционально);
+    # <home-page> - 0..n (любое число, опционально);
+    # <email> - 0..n (любое число, опционально);
+    # <id> - 0..1 (один, опционально) с версии 2.2 - идентификатор автора, присваивается библиотекой.
+    #
+    # Подчинен
+    # Может содержаться в следующих элементах:
+    # <title-info> 1..n (любое число, один обязателен);
+    # <src-title-info> 1..n (любое число, один обязателен) с версии 2.1;
+    # <document-info> 1..n (любое число, один обязателен);
+
     def __init__(self):
-        pass
+        self.first_name = None
+        self.middle_name = None
+        self.last_name = None
+        self.nickname = None
+        self.home_page = None
+        self.email = None
+        self.id = None
+
 
 
 class Lang:
