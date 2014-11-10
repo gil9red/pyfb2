@@ -45,5 +45,5 @@ class FB2:
         source_fb2 += '</FictionBook>'
 
         from xml.dom.minidom import parseString
-        source_fb2 = parseString(source_fb2).toprettyxml(indent=' ')
+        source_fb2 = parseString(source_fb2).toprettyxml(indent='  ')
         return source_fb2
