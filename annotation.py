@@ -49,8 +49,12 @@ class Annotation:
     # <p>Читайте ?Наследие исполинов? - первую книгу нового цикла Владимира Васильева ?Война за мобильность?!</p>
     # </annotation>
 
+    # TODO: доделать
+
     def __init__(self):
         pass
 
     def get_source(self):
-        pass
+        source = '<annotation>'
+        source += '</annotation>'
+        return source
