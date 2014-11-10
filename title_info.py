@@ -2,6 +2,7 @@ __author__ = 'ipetrash'
 
 
 from book_title import Book_Title
+from lang import Lang
 
 
 class Title_Info:
@@ -21,7 +22,7 @@ class Title_Info:
         self.keywords = None  # <keywords> - 0..1 (один, опционально);
         self.date = None  # <date> - 0..1 (один, опционально);
         self.coverpage = None  # <coverpage> - 0..1 (один, опционально);
-        self.lang = None  # <lang> - 1 (один, обязателен);
+        self.lang = Lang()  # <lang> - 1 (один, обязателен);
         self.src_lang = None  # <src-lang> - 0..1 (один, опционально);
         self.translator = []  # <translator> - 0..n (любое число, опционально);
         self.sequence = []  # <sequence> - 0..n (любое число, опционально).
