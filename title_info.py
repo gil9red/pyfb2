@@ -4,6 +4,7 @@ __author__ = 'ipetrash'
 from book_title import Book_Title
 from lang import Lang
 from keywords import Keywords
+from date import Date
 
 
 class Title_Info:
@@ -21,7 +22,7 @@ class Title_Info:
         self.book_title = Book_Title()  # <book-title> - 1 (один, обязателен);
         self.annotation = None  # <annotation> - 0..1 (один, опционально);
         self.keywords = Keywords()  # <keywords> - 0..1 (один, опционально);
-        self.date = None  # <date> - 0..1 (один, опционально);
+        self.date = Date()  # <date> - 0..1 (один, опционально);
         self.coverpage = None  # <coverpage> - 0..1 (один, опционально);
         self.lang = Lang()  # <lang> - 1 (один, обязателен);
         self.src_lang = None  # <src-lang> - 0..1 (один, опционально);
