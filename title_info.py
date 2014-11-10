@@ -6,6 +6,8 @@ from lang import Lang
 from keywords import Keywords
 from date import Date
 from src_lang import Src_Lang
+from coverpage import Coverpage
+from annotation import Annotation
 
 
 class Title_Info:
@@ -21,10 +23,10 @@ class Title_Info:
         self.genre = []  # <genre> - 1..n (любое число, один обязaтелен);
         self.author = []  # <author> - 1..n (любое число, один обязaтелен);
         self.book_title = Book_Title()  # <book-title> - 1 (один, обязателен);
-        self.annotation = None  # <annotation> - 0..1 (один, опционально);
+        self.annotation = Annotation()  # <annotation> - 0..1 (один, опционально);
         self.keywords = Keywords()  # <keywords> - 0..1 (один, опционально);
         self.date = Date()  # <date> - 0..1 (один, опционально);
-        self.coverpage = None  # <coverpage> - 0..1 (один, опционально);
+        self.coverpage = Coverpage()  # <coverpage> - 0..1 (один, опционально);
         self.lang = Lang()  # <lang> - 1 (один, обязателен);
         self.src_lang = Src_Lang()  # <src-lang> - 0..1 (один, опционально);
         self.translator = []  # <translator> - 0..n (любое число, опционально);
