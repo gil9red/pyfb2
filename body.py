@@ -58,21 +58,37 @@ class Body:
     def __init__(self):
         self.name = None
         self.lang = None
-        self.image = Image()
-        self.title = Title()
-        self.epigraph = []
-        self.section = [Section()]
+        self.__image = None  # 0..1 (один, опционально)
+        self.__title = None  # 0..1 (один, опционально)
+        self.epigraph = []  # 0..n (любое число, опционально)
+        self.section = [Section()]  # 1..n (любое число, один обязaтелен)
+
+    def get_image(self):
+        if not self.__image:
+            self.__image = Image()
+        return self.__image
+    image = property(get_image)
+
+    def get_title(self):
+        if not self.__title:
+            self.__title = Title()
+        return self.__title
+    title = property(get_title)
 
     def get_source(self):
-        name = ' name="{}"'.format(self.name) if self.name else ''
-        lang = ' xml:lang="{}"'.format(self.lang) if self.lang else ''
-        source = '<body{}{}>'.format(name, lang)
+        source = '<body'
+        if self.name:
+            source += ' name="{}"'.format(self.name)
 
-        if self.image:
-            source += self.image.get_source()
+        if self.lang:
+            source += ' xml:lang="{}"'.format(self.lang)
+        source += '>'
 
-        if self.title:
-            source += self.title.get_source()
+        if self.__image:
+            source += self.__image.get_source()
+
+        if self.__title:
+            source += self.__title.get_source()
 
         for e in self.epigraph:
             source += e.get_source()
