@@ -5,6 +5,7 @@ __author__ = 'ipetrash'
 # TODO: xml:lang = http://htmlbook.ru/html/value/lang
 # http://www.fictionbook.org/index.php/Пример_документа_в_FB2
 
+
 if __name__ == '__main__':
     book = fb2.FB2()
 
@@ -21,9 +22,13 @@ if __name__ == '__main__':
     title_info.sequence.append("Горящий пукан школоты", 5, "ru")
     title_info.genre.append("adv_western")
     title_info.genre.append("detective", match=20)
-    
-    # title_info.genre = []  # <genre> - 1..n (любое число, один обязaтелен);
-    # title_info.author = []  # <author> - 1..n (любое число, один обязaтелен);
+    title_info.author.append("Ilya", "Andreevich", "Petrash", "gil9red",
+                             home_page=["https://github.com/gil9red", "http://vk.com/ipetrash"],
+                             email="ip1992@inbox.ru", id="777")
+    title_info.author.append(first_name="Vasya", last_name="Pupkin")
+
+    # + title_info.genre = []  # <genre> - 1..n (любое число, один обязaтелен);
+    # + title_info.author = []  # <author> - 1..n (любое число, один обязaтелен);
     # + title_info.book_title = Book_Title()  # <book-title> - 1 (один, обязателен);
     # title_info.annotation = None  # <annotation> - 0..1 (один, опционально);
     # + title_info.keywords = None  # <keywords> - 0..1 (один, опционально);
@@ -32,6 +37,6 @@ if __name__ == '__main__':
     # + title_info.lang = Lang()  # <lang> - 1 (один, обязателен);
     # + title_info.src_lang = None  # <src-lang> - 0..1 (один, опционально);
     # title_info.translator = []  # <translator> - 0..n (любое число, опционально);
-    # title_info.sequence = []  # <sequence> - 0..n (любое число, опционально).
+    # + title_info.sequence = []  # <sequence> - 0..n (любое число, опционально).
 
     print(book.get_source())
