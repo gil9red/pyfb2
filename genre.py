@@ -23,7 +23,11 @@ class GenreItem:
     # <genre>adv_western</genre>
     # <genre match="20">detective</genre>
 
+    # TODO: доделать
+
     def __init__(self, name=None, match=None):
+        # TODO: проверять значение match: 0 <= match <= 100
+
         self.name = name
         self.match = match
 
