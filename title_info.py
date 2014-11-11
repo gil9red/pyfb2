@@ -8,6 +8,7 @@ from date import Date
 from src_lang import Src_Lang
 from coverpage import Coverpage
 from annotation import Annotation
+from sequence import Sequence
 
 
 class Title_Info:
@@ -30,7 +31,7 @@ class Title_Info:
         self.lang = Lang()  # <lang> - 1 (один, обязателен);
         self.src_lang = Src_Lang()  # <src-lang> - 0..1 (один, опционально);
         self.translator = []  # <translator> - 0..n (любое число, опционально);
-        self.sequence = []  # <sequence> - 0..n (любое число, опционально).
+        self.sequence = Sequence()  # <sequence> - 0..n (любое число, опционально).
 
     def get_source(self):
         # TODO: доделать
@@ -64,8 +65,7 @@ class Title_Info:
         for t in self.translator:
             source += t.get_source()
 
-        for s in self.sequence:
-            source += s.get_source()
+        source += self.sequence.get_source()
 
         source += '</title-info>'
         return source
