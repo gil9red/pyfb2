@@ -52,9 +52,13 @@ class Annotation:
     # TODO: доделать
 
     def __init__(self):
-        pass
+        self.text = None
 
     def get_source(self):
+        if not self.text:
+            raise NameError('Нет содержимого тэга annotation.')
+
         source = '<annotation>'
+        source += self.text
         source += '</annotation>'
         return source
