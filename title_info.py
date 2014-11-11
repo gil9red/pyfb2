@@ -42,24 +42,12 @@ class Title_Info:
         source += self.genre.get_source()
         source += self.author.get_source()
         source += self.book_title.get_source()
-
-        if self.annotation:
-            source += self.annotation.get_source()
-
-        if self.keywords:
-            source += self.keywords.get_source()
-
-        if self.date:
-            source += self.date.get_source()
-
-        if self.coverpage:
-            source += self.coverpage.get_source()
-
+        source += self.annotation.get_source()
+        source += self.keywords.get_source()
+        source += self.date.get_source()
+        source += self.coverpage.get_source()
         source += self.lang.get_source()
-
-        if self.src_lang:
-            source += self.src_lang.get_source()
-
+        source += self.src_lang.get_source()
         source += self.translator.get_source()
         source += self.sequence.get_source()
         source += '</title-info>'
