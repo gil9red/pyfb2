@@ -12,6 +12,8 @@ __author__ = 'ipetrash'
 if __name__ == '__main__':
     book = fb2.FB2()
 
+    book.stylesheet.append("text/css", "span.semi-condensed{'font-stretch : semi-condensed;}")
+
     title_info = book.description.title_info
     title_info.book_title.text = "Мое произведение"
     title_info.book_title.lang = "ru"
