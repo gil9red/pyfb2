@@ -40,6 +40,8 @@ class Image:
     # <image xlink:href="#picture.jpg"/>
     # <p>Абзац текста после картинки.</p>
 
+    # TODO: доделать
+
     def __init__(self):
         self.type = None
         self.href = None
@@ -48,6 +50,24 @@ class Image:
         self.id = None
 
     def get_source(self):
-        # TODO: проверять атрибуты
-        # TODO: доделать
-        return '<image />'
+        if not self.href:
+            raise NameError('Не указана ссылка на изображение.')
+
+        source = '<image'
+        source += ' xlink:href="#{}"'.format(self.href)
+
+        if self.type:
+            source += ' xlink:type="{}"'.format(self.type)
+
+        if self.alt:
+            source += ' alt="{}"'.format(self.alt)
+
+        if self.title:
+            source += ' title="{}"'.format(self.title)
+
+        if self.id:
+            source += ' id="{}"'.format(self.id)
+
+        source += '/>'
+
+        return source
