@@ -31,8 +31,8 @@ class Coverpage:
         self.images.append(image)
 
     def get_source(self):
-        if not self.images:
-            raise NameError('Список изображений пуст.')
+        # if not self.images:
+        #     raise NameError('Список изображений пуст.')
 
         source = '<coverpage>'
         for im in self.images:
