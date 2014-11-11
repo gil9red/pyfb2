@@ -10,6 +10,7 @@ from coverpage import Coverpage
 from annotation import Annotation
 from sequence import Sequence
 from genre import Genre
+from author import Author
 
 
 class Title_Info:
@@ -23,7 +24,7 @@ class Title_Info:
 
     def __init__(self):
         self.genre = Genre()  # <genre> - 1..n (любое число, один обязaтелен);
-        self.author = []  # <author> - 1..n (любое число, один обязaтелен);
+        self.author = Author()  # <author> - 1..n (любое число, один обязaтелен);
         self.book_title = Book_Title()  # <book-title> - 1 (один, обязателен);
         self.annotation = Annotation()  # <annotation> - 0..1 (один, опционально);
         self.keywords = Keywords()  # <keywords> - 0..1 (один, опционально);
@@ -37,12 +38,8 @@ class Title_Info:
     def get_source(self):
         # TODO: доделать
         source = '<title-info>'
-
         source += self.genre.get_source()
-
-        for a in self.author:
-            source += a.get_source()
-
+        source += self.author.get_source()
         source += self.book_title.get_source()
 
         if self.annotation:
@@ -66,6 +63,5 @@ class Title_Info:
             source += t.get_source()
 
         source += self.sequence.get_source()
-
         source += '</title-info>'
         return source
