@@ -1,7 +1,10 @@
 __author__ = 'ipetrash'
 
 
-class Binary:
+""""""
+
+
+class BinaryItem:
     """"""
 
     # Не содержит подчиненных элементов.
@@ -34,7 +37,32 @@ class Binary:
 
     def get_source(self):
         # TODO: проверять значения атрибутов
+
         source = '<binary id="{}" content-type="{}">'.format(self.id, self.content_type)
         source += self.data
         source += '</binary>'
+        return source
+
+
+class Binary:
+    """"""
+
+    # TODO: доделать
+
+    def __init__(self):
+        self.list = []
+
+    def append(self, id_bin, content_type_bin, data_bin):
+        bin = BinaryItem()
+        bin.id = id_bin
+        bin.content_type = content_type_bin
+        bin.data = data_bin
+
+        self.list.append(bin)
+
+    def get_source(self):
+        source = ''
+        for b in self.list:
+            source += b.get_source()
+
         return source
