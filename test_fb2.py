@@ -16,6 +16,8 @@ if __name__ == '__main__':
 
     title_info = book.description.title_info
     title_info.book_title.text = "Мое произведение"
+    title_info.annotation.text = ("<p>?Смерть или слава?, ?Черная эстафета?. "
+                                  "И теперь наконец - ?Наследие исполинов?!</p>")
     title_info.book_title.lang = "ru"
     title_info.lang.value = "ru"
     title_info.src_lang.value = "en"
@@ -48,9 +50,6 @@ if __name__ == '__main__':
     im = Image()
     im.href = "cover"
     title_info.coverpage.append(im)
-
-
-    # - title_info.annotation = None  # <annotation> - 0..1 (один, опционально);
 
 
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
