@@ -12,7 +12,7 @@ __author__ = 'ipetrash'
 if __name__ == '__main__':
     book = fb2.FB2()
 
-    book.stylesheet.append("text/css", "span.semi-condensed{'font-stretch : semi-condensed;}")
+    book.stylesheet.append("text/css", "span.semi-condensed{'font-stretch' : semi-condensed;}")
 
     title_info = book.description.title_info
     title_info.book_title.text = "Мое произведение"
@@ -44,11 +44,16 @@ if __name__ == '__main__':
     t.last_name = "Pupkin"
     title_info.translator.append(t)
 
+    from image import Image
+    im = Image()
+    im.href = "cover"
+    title_info.coverpage.append(im)
+
+
     # - title_info.annotation = None  # <annotation> - 0..1 (один, опционально);
-    # - title_info.coverpage = None  # <coverpage> - 0..1 (один, опционально);
 
 
-    book.binary.append("cover", "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
+    book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
     book.binary.append("im_1", "image/png", "DhAAAAAQ")
 
 
