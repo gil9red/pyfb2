@@ -1,9 +1,20 @@
-from lxml.objectify import NoneElement
-
 __author__ = 'ipetrash'
 
 
 """"""
+
+
+# # TODO: может, список возможных жанров в перечислении описать?
+# # http://www.fictionbook.org/index.php/Жанры_FictionBook_2.1
+# # http://www.fictionbook.org/index.php/Eng:FictionBook_2.1_genres
+# from enum import Enum
+# class Genres(Enum):
+#     sf_history = "sf_history"
+#     sf_action = "sf_action"
+#     sf_epic = "sf_epic"
+#
+# print(Genres.sf_history.value)
+# print(type(Genres.sf_history.value))
 
 
 class GenreItem:
