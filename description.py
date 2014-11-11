@@ -31,10 +31,10 @@ class Description:
     # <FictionBook> - 1 (один, обязателен)
 
     def __init__(self):
-        self.title_info = Title_Info()
-        self.document_info = Document_Info()
-        self.publish_info = None
-        self.custom_info = []
+        self.title_info = Title_Info()  # 1 (один, обязателен);
+        self.document_info = Document_Info()  # 1 (один, обязателен);
+        self.publish_info = None  # 0..1 (один, опционально);
+        self.custom_info = []  # 0..n (любое число, опционально);
 
     def get_source(self):
         source = '<description>'
