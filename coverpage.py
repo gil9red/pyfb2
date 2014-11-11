@@ -20,7 +20,7 @@ class Coverpage:
     # <src-title-info; 0..1 (один, опционально).
     #
     # Пример использования
-    # <coverpage><image l:href="#cover.jpg"/></coverpage>
+    # <coverpage><image xlink:href="#cover.jpg"/></coverpage>
 
     # TODO: доделать
 

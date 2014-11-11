@@ -1,6 +1,9 @@
 __author__ = 'ipetrash'
 
 
+""""""
+
+
 class Image:
     """"""
 
@@ -34,7 +37,7 @@ class Image:
     #
     # Пример использования
     # <p>Абзац текста до картинки.</p>
-    # <image l:href="#picture.jpg"/>
+    # <image xlink:href="#picture.jpg"/>
     # <p>Абзац текста после картинки.</p>
 
     def __init__(self):

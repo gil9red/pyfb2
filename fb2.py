@@ -45,8 +45,9 @@ class FB2:
 
     def get_source(self):
         source_fb2 = ''
-        source_fb2 += ('<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" '
-                       'xmlns:l="http://www.w3.org/1999/xlink">')
+        source_fb2 += ('<FictionBook '
+                       'xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" '
+                       'xmlns:xlink="http://www.w3.org/1999/xlink">')
         source_fb2 += self.stylesheet.get_source()
         source_fb2 += self.description.get_source()
         for b in self.body:
