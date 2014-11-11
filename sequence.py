@@ -4,8 +4,10 @@ __author__ = 'ipetrash'
 """"""
 
 
-class Sequence:
+class SequenceItem:
     """"""
+
+    # TODO: Доделать
 
     # Описание
     # Серия изданий, в которую входит книга, и номер в серии.
@@ -27,10 +29,36 @@ class Sequence:
     # Пример использования
     # <sequence name="Грегор Эйзенхорн" number="2"/>
 
+    def __init__(self, name=None, number=None, lang=None):
+        self.name = name
+        self.number = number
+        self.lang = lang
+
+    def get_source(self):
+        if not self.name or not self.number:
+            raise NameError('Не определено название или номер в серии.')
+
+        if self.lang:
+            return ('<sequence xml:lang="{}" name="{}" '
+                    'number="{}"/>').format(self.lang, self.name, self.number)
+        else:
+            return '<sequence name="{}" number="{}"/>'.format(self.name, self.number)
+
+
+class Sequence:
+    """"""
+
     # TODO: Доделать
 
     def __init__(self):
-        pass
+        self.list = []
+
+    def append(self, name, number, lang=None):
+        self.list.append(SequenceItem(name, number, lang))
 
     def get_source(self):
-        pass
+        source = ''
+        for s in self.list:
+            source += s.get_source()
+
+        return source
