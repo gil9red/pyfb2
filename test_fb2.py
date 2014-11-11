@@ -19,6 +19,8 @@ if __name__ == '__main__':
     title_info.date.set_date(16, 11, 2014)
     title_info.sequence.append("Война и мир", 1)
     title_info.sequence.append("Горящий пукан школоты", 5, "ru")
+    title_info.genre.append("adv_western")
+    title_info.genre.append("detective", match=20)
     
     # title_info.genre = []  # <genre> - 1..n (любое число, один обязaтелен);
     # title_info.author = []  # <author> - 1..n (любое число, один обязaтелен);

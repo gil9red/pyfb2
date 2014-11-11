@@ -29,18 +29,18 @@
       <file leaf-file-name="test_fb2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_fb2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="680">
-              <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="714">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="title_info.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="title_info.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/title_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2172284" vertical-offset="814" max-vertical-offset="1292">
-              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="1292">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
               <folding>
                 <element signature="e#26#59#0" expanded="true" />
               </folding>
@@ -48,31 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sequence.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1173">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="genre.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="genre.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/genre.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="629">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="annotation.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annotation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="678" max-vertical-offset="1105">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state vertical-scroll-proportion="2.0410557" vertical-offset="307" max-vertical-offset="1105">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -94,7 +74,6 @@
         <option value="$PROJECT_DIR$/pyfb2/__init__.py" />
         <option value="$PROJECT_DIR$/pyfb2/genre.py" />
         <option value="$PROJECT_DIR$/pyfb2/fb2.py" />
-        <option value="$PROJECT_DIR$/genre.py" />
         <option value="$PROJECT_DIR$/author.py" />
         <option value="$PROJECT_DIR$/document_info.py" />
         <option value="$PROJECT_DIR$/publish_info.py" />
@@ -114,9 +93,10 @@
         <option value="$PROJECT_DIR$/src_lang.py" />
         <option value="$PROJECT_DIR$/coverpage.py" />
         <option value="$PROJECT_DIR$/annotation.py" />
-        <option value="$PROJECT_DIR$/title_info.py" />
-        <option value="$PROJECT_DIR$/test_fb2.py" />
         <option value="$PROJECT_DIR$/sequence.py" />
+        <option value="$PROJECT_DIR$/test_fb2.py" />
+        <option value="$PROJECT_DIR$/title_info.py" />
+        <option value="$PROJECT_DIR$/genre.py" />
       </list>
     </option>
   </component>
@@ -673,7 +653,19 @@
       <created>1415702479082</created>
       <updated>1415702479083</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415702517569</created>
+      <updated>1415702517569</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Обновлен класс Genre.&#10;Добавлен класс GenreItem.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415704375476</created>
+      <updated>1415704375476</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Обновлен класс Title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;">
+      <created>1415704411835</created>
+      <updated>1415704411835</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -710,7 +702,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944812" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39175257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23917526" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -736,8 +728,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Добавлен модуль custom_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
-    <MESSAGE value="Добавлен модуль description.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Добавлен модуль epigraph.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Добавлен модуль image.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Добавлен модуль publish_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
@@ -758,10 +748,12 @@
     <MESSAGE value="Добавлен модуль coverpage.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Обновлен класс annotation.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Добавлен модуль sequence.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
-    <MESSAGE value="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Обновлен класс Sequence.&#10;Добавлен класс SequenceItem.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
     <MESSAGE value="Обновлен класс title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновлен класс title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Обновлено.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Обновлен класс Genre.&#10;Добавлен класс GenreItem.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <MESSAGE value="Обновлен класс Title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновлен класс Title_info.&#10;&#10;Signed-off-by: Ilya Petrash &lt;gil9red@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -951,45 +943,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="678" max-vertical-offset="1105">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genre.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="629">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_fb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="680">
-          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1173">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.74531835" vertical-offset="770" max-vertical-offset="1173">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0787401" vertical-offset="678" max-vertical-offset="1105">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/title_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2172284" vertical-offset="814" max-vertical-offset="1292">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="1292">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
           <folding>
             <element signature="e#26#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_fb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="714">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0410557" vertical-offset="307" max-vertical-offset="1105">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
