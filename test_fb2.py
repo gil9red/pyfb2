@@ -47,4 +47,9 @@ if __name__ == '__main__':
     # - title_info.annotation = None  # <annotation> - 0..1 (один, опционально);
     # - title_info.coverpage = None  # <coverpage> - 0..1 (один, опционально);
 
+
+    book.binary.append("cover", "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
+    book.binary.append("im_1", "image/png", "DhAAAAAQ")
+
+
     print(book.get_source())
