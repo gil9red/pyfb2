@@ -11,6 +11,7 @@ from annotation import Annotation
 from sequence import Sequence
 from genre import Genre
 from author import Author
+from translator import Translator
 
 
 class Title_Info:
@@ -32,7 +33,7 @@ class Title_Info:
         self.coverpage = Coverpage()  # <coverpage> - 0..1 (один, опционально);
         self.lang = Lang()  # <lang> - 1 (один, обязателен);
         self.src_lang = Src_Lang()  # <src-lang> - 0..1 (один, опционально);
-        self.translator = []  # <translator> - 0..n (любое число, опционально);
+        self.translator = Translator()  # <translator> - 0..n (любое число, опционально);
         self.sequence = Sequence()  # <sequence> - 0..n (любое число, опционально).
 
     def get_source(self):
@@ -59,9 +60,7 @@ class Title_Info:
         if self.src_lang:
             source += self.src_lang.get_source()
 
-        for t in self.translator:
-            source += t.get_source()
-
+        source += self.translator.get_source()
         source += self.sequence.get_source()
         source += '</title-info>'
         return source
