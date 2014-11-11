@@ -9,6 +9,7 @@ from src_lang import Src_Lang
 from coverpage import Coverpage
 from annotation import Annotation
 from sequence import Sequence
+from genre import Genre
 
 
 class Title_Info:
@@ -21,7 +22,7 @@ class Title_Info:
     # <description> - 1 (один, обязателен)
 
     def __init__(self):
-        self.genre = []  # <genre> - 1..n (любое число, один обязaтелен);
+        self.genre = Genre()  # <genre> - 1..n (любое число, один обязaтелен);
         self.author = []  # <author> - 1..n (любое число, один обязaтелен);
         self.book_title = Book_Title()  # <book-title> - 1 (один, обязателен);
         self.annotation = Annotation()  # <annotation> - 0..1 (один, опционально);
@@ -37,8 +38,7 @@ class Title_Info:
         # TODO: доделать
         source = '<title-info>'
 
-        for g in self.genre:
-            source += g.get_source()
+        source += self.genre.get_source()
 
         for a in self.author:
             source += a.get_source()
