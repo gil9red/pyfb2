@@ -38,13 +38,10 @@ class FB2:
         self.stylesheet = Stylesheet()  # Любое число, опционально
         self.description = Description()  # Одно и только одно вхождение
         self.body = [Body()]  # Одно или более вхождений
-        self.binary = []  # Любое число вхождений
+        self.binary = Binary()  # Любое число вхождений
 
     def add_body(self):
         self.body.append(Body())
-
-    def add_binary(self):
-        self.binary.append(Binary())
 
     def get_source(self):
         source_fb2 = ''
@@ -54,8 +51,7 @@ class FB2:
         source_fb2 += self.description.get_source()
         for b in self.body:
             source_fb2 += b.get_source()
-        for bi in self.binary:
-            source_fb2 += bi.get_source()
+        source_fb2 += self.binary.get_source()
         source_fb2 += '</FictionBook>'
 
         from xml.dom.minidom import parseString
