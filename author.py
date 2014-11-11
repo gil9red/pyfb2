@@ -1,7 +1,10 @@
 __author__ = 'ipetrash'
 
 
-class Author:
+""""""
+
+
+class AuthorItem:
     """Информация об авторе книги, если элемент используется в <title-info>
     или <src-title-info>; или об авторе документа, если в <document-info>."""
 
@@ -37,13 +40,21 @@ class Author:
         self.id = None
 
     def add_home_page(self, value):
-        self.home_page.append(value)
+        if value:
+            if isinstance(value, list):
+                self.home_page.extend(value)
+            else:
+                self.home_page.append(value)
 
     def remove_home_page(self, value):
         self.home_page.remove(value)
 
     def add_email(self, value):
-        self.email.append(value)
+        if value:
+            if isinstance(value, list):
+                self.email.extend(value)
+            else:
+                self.email.append(value)
 
     def remove_email(self, value):
         self.email.remove(value)
@@ -74,4 +85,36 @@ class Author:
             source += '<id>{}</id>'.format(self.id)
 
         source += '</author>'
+        return source
+
+
+class Author:
+    """"""
+
+    # TODO: доделать
+
+    def __init__(self):
+        self.list = []
+
+    def append(self, first_name=None, middle_name=None, last_name=None,
+               nickname=None, home_page=None, email=None, id=None):
+        author = AuthorItem()
+        author.first_name = first_name
+        author.middle_name = middle_name
+        author.last_name = last_name
+        author.nickname = nickname
+        author.add_home_page(home_page)
+        author.add_email(email)
+        author.id = id
+        self.list.append(author)
+
+    def get_source(self):
+        # Список авторов должен иметь как минимум один элемент
+        if not self.list:
+            raise NameError('Список авторов пуст.')
+
+        source = ''
+        for a in self.list:
+            source += a.get_source()
+
         return source
