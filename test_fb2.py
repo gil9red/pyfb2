@@ -98,6 +98,11 @@ if __name__ == '__main__':
     publish_info.isbn.text = "5-16-002911-7"
 
 
+    custom_info = book.description.custom_info
+    custom_info.append("used", "all")
+    custom_info.append("secret_key", "foobar")
+
+
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
     book.binary.append("im_1", "image/png", "DhAAAAAQ")
 
