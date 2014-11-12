@@ -7,6 +7,8 @@ __author__ = 'ipetrash'
 from sequence import Sequence
 from book_name import Book_Name
 import publisher_pub_info
+from city import City
+
 
 class Publish_Info:
     """"""
@@ -63,12 +65,12 @@ class Publish_Info:
         return self.__publisher
     publisher = property(get_publisher)
 
-    # def get_city(self):
-    #     if not self.__city:
-    #         self.__city = City()
-    #     return self.__city
-    # city = property(get_city)
-    #
+    def get_city(self):
+        if not self.__city:
+            self.__city = City()
+        return self.__city
+    city = property(get_city)
+
     # def get_year(self):
     #     if not self.__year:
     #         self.__year = Year()
@@ -90,16 +92,16 @@ class Publish_Info:
         if self.__publisher:
             source += self.__publisher.get_source()
 
-        # if self.__city:
-        #     source += self.__city.get_source()
-        #
-        # if self.__year:
-        #     source += self.__year.get_source()
-        #
-        # if self.__isbn:
-        #     source += self.__isbn.get_source()
-        #
-        # source += self.sequence.get_source()
+        if self.__city:
+            source += self.__city.get_source()
+
+        if self.__year:
+            source += self.__year.get_source()
+
+        if self.__isbn:
+            source += self.__isbn.get_source()
+
+        source += self.sequence.get_source()
 
         source += '</publish-info>'
         return source
