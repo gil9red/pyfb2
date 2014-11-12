@@ -11,6 +11,7 @@ from src_url import Src_Url
 from src_ocr import Src_Ocr
 from id_tag import Id
 from version import Version
+from history import History
 
 
 class Document_Info:
@@ -55,6 +56,12 @@ class Document_Info:
         return self.__src_ocr
     src_ocr = property(get_src_ocr)
 
+    def get_history(self):
+        if not self.__history:
+            self.__history = History()
+        return self.__history
+    history = property(get_history)
+
     def get_source(self):
         source = '<document-info>'
         source += self.author.get_source()
@@ -70,9 +77,9 @@ class Document_Info:
         source += self.id.get_source()
         source += self.version.get_source()
 
-        # if self.__history:
-        #     source += self.__history.get_source()
-        #
+        if self.__history:
+            source += self.__history.get_source()
+
         # source += self.publisher.get_source()
         source += '</document-info>'
         return source
