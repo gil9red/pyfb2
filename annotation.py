@@ -52,13 +52,21 @@ class Annotation:
     # TODO: доделать
 
     def __init__(self):
+        self.id = None  # (опционально)
+        self.lang = None  # (опционально)
         self.text = None
 
     def get_source(self):
         if not self.text:
             raise NameError('Нет содержимого тэга annotation.')
 
-        source = '<annotation>'
+        source = '<annotation'
+        if self.id:
+            source += ' id="{}"'.format(self.id)
+
+        if self.lang:
+            source += ' xml:lang="{}"'.format(self.lang)
+        source += '>'
         source += self.text
         source += '</annotation>'
         return source
