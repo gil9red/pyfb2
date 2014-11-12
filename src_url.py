@@ -33,10 +33,10 @@ class Src_Url:
                 self.append(p)
         else:
             # Добавим url, если ее нет в списке:
-            if not url in self.list:
+            if not url in self.list and url:
                 self.list.append(url)
             else:
-                print('Элемент "" уже есть в списке.'.format(url))
+                print('Элемент "{}" уже есть в списке.'.format(url))
 
     def get_source(self):
         source = ''

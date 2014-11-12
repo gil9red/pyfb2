@@ -35,10 +35,10 @@ class Program_Used:
                 self.append(p)
         else:
             # Добавим программу, если ее нет в списке:
-            if not program in self.list:
+            if not program in self.list and program:
                 self.list.append(program)
             else:
-                print('Элемент "" уже есть в списке.'.format(program))
+                print('Элемент "{}" уже есть в списке.'.format(program))
 
     def get_source(self):
         if not self.list:
