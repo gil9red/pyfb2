@@ -12,6 +12,7 @@ from src_ocr import Src_Ocr
 from id_tag import Id
 from version import Version
 from history import History
+import publisher_doc_info
 
 
 class Document_Info:
@@ -42,7 +43,7 @@ class Document_Info:
         self.id = Id()  # 1 (один, обязателен);
         self.version = Version()  # 1 (один, обязателен);
         self.__history = None  # 0..1 (один, опционально);
-        self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
+        self.publisher = publisher_doc_info.Publisher()  # 0..n (любое число, опционально) с версии 2.2.
 
     def get_program_used(self):
         if not self.__program_used:
@@ -80,6 +81,6 @@ class Document_Info:
         if self.__history:
             source += self.__history.get_source()
 
-        # source += self.publisher.get_source()
+        source += self.publisher.get_source()
         source += '</document-info>'
         return source
