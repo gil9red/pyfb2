@@ -9,6 +9,7 @@ from book_name import Book_Name
 import publisher_pub_info
 from city import City
 from year import Year
+from isbn import Isbn
 
 
 class Publish_Info:
@@ -78,11 +79,11 @@ class Publish_Info:
         return self.__year
     year = property(get_year)
 
-    # def get_isbn(self):
-    #     if not self.__isbn:
-    #         self.__isbn = Isbn()
-    #     return self.__isbn
-    # isbn = property(get_isbn)
+    def get_isbn(self):
+        if not self.__isbn:
+            self.__isbn = Isbn()
+        return self.__isbn
+    isbn = property(get_isbn)
 
     def get_source(self):
         source = '<publish-info>'
