@@ -94,6 +94,9 @@ if __name__ == '__main__':
     publish_info.city.lang = "ru"
     publish_info.city.text = "Бабруйск"
     publish_info.year.text = "2002"
+    publish_info.isbn.lang = "en"
+    publish_info.isbn.text = "5-16-002911-7"
+
 
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
     book.binary.append("im_1", "image/png", "DhAAAAAQ")
