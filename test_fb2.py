@@ -1,4 +1,5 @@
 from author import AuthorItem
+from program_used import Program_Used
 from translator import TranslatorItem
 
 import fb2
@@ -50,6 +51,23 @@ if __name__ == '__main__':
     im = Image()
     im.href = "cover"
     title_info.coverpage.append(im)
+
+
+    document_info = book.description.document_info
+    document_info.author.append(a)
+    document_info.program_used.lang = "en"
+    document_info.program_used.append("opera")
+    document_info.program_used.append(["word", "notepad"])
+    document_info.program_used.append(["IE", "word", "notepad"])
+    document_info.date.set_date(12, 11, 2014)
+    document_info.src_url.append("www.vk.com")
+    document_info.src_url.append("www.vk.com")
+    document_info.src_ocr.lang = "ru"
+    document_info.src_ocr.text = "Vasya Pupkin"
+    # self.id = None  # 1 (один, обязателен);
+    # self.version = None  # 1 (один, обязателен);
+    # self.history = None  # 0..1 (один, опционально);
+    # self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
 
 
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
