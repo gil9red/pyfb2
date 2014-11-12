@@ -1,4 +1,5 @@
 from author import AuthorItem
+from publisher_doc_info import PublisherItem
 from translator import TranslatorItem
 
 import fb2
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     document_info.program_used.append(["IE", "word", "notepad"])
     document_info.date.set_date(12, 11, 2014)
     document_info.src_url.append("www.vk.com")
-    document_info.src_url.append("www.vk.com")
+    document_info.src_url.append(["www.vk.com", "www.wiki.org", "www.bash.im"])
     document_info.src_ocr.lang = "ru"
     document_info.src_ocr.text = "Vasya Pupkin"
     document_info.id.value = "C03EEC10-4053-4913-86D0-F379926F3487"
@@ -68,7 +69,16 @@ if __name__ == '__main__':
     document_info.history.text = "<p>Первая версия.</p>"
     document_info.history.id = "112211"
     document_info.history.lang = "ru"
-    # self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
+
+    p1 = PublisherItem()
+    p1.first_name = "Vasya"
+    p1.last_name = "Pupkin"
+    document_info.publisher.append(p1)
+
+    p2 = PublisherItem()
+    p2.first_name = "Ivan"
+    p2.last_name = "Ivanov"
+    document_info.publisher.append(p2)
 
 
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
