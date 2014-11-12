@@ -37,11 +37,8 @@ class FB2:
     def __init__(self):
         self.stylesheet = Stylesheet()  # Любое число, опционально
         self.description = Description()  # Одно и только одно вхождение
-        self.body = [Body()]  # Одно или более вхождений
+        self.body = Body()  # Одно или более вхождений
         self.binary = Binary()  # Любое число вхождений
-
-    def add_body(self):
-        self.body.append(Body())
 
     def get_source(self):
         source_fb2 = ''
@@ -50,8 +47,7 @@ class FB2:
                        'xmlns:xlink="http://www.w3.org/1999/xlink">')
         source_fb2 += self.stylesheet.get_source()
         source_fb2 += self.description.get_source()
-        for b in self.body:
-            source_fb2 += b.get_source()
+        source_fb2 += self.body.get_source()
         source_fb2 += self.binary.get_source()
         source_fb2 += '</FictionBook>'
 
