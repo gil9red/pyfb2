@@ -96,6 +96,7 @@ if __name__ == '__main__':
     publish_info.year.text = "2002"
     publish_info.isbn.lang = "en"
     publish_info.isbn.text = "5-16-002911-7"
+    publish_info.sequence.append("Жизнь - Боль", 1, "ru")
 
 
     custom_info = book.description.custom_info
@@ -103,8 +104,12 @@ if __name__ == '__main__':
     custom_info.append("secret_key", "foobar")
 
 
-    book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
-    book.binary.append("im_1", "image/png", "DhAAAAAQ")
+    body = book.body
+
+
+    binary = book.binary
+    binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
+    binary.append("im_1", "image/png", "DhAAAAAQ")
 
 
     print(book.get_source())
