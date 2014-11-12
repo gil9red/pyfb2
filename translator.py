@@ -18,6 +18,8 @@ class TranslatorItem(PersonItem):
     #   <last-name>Сергеев</last-name>
     # </translator>
 
+    # TODO: доделать
+
     def __init__(self):
         super().__init__()
 
@@ -27,12 +29,14 @@ class TranslatorItem(PersonItem):
 class Translator(Person):
     """"""
 
+    # TODO: доделать
+
     def __init__(self):
         super().__init__()
 
     def get_source(self):
         # Список переводчиков необязательный, поэтому обойдемся
-        # без выбрасывания исключения и просто выйдем
+        # без выбрасывания исключения и просто выйдем, если список пуст
         if not self.list:
             return ''
 
