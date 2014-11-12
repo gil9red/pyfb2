@@ -64,8 +64,8 @@ if __name__ == '__main__':
     document_info.src_url.append("www.vk.com")
     document_info.src_ocr.lang = "ru"
     document_info.src_ocr.text = "Vasya Pupkin"
-    # self.id = None  # 1 (один, обязателен);
-    # self.version = None  # 1 (один, обязателен);
+    document_info.id.value = "C03EEC10-4053-4913-86D0-F379926F3487"
+    document_info.version.value = "1.0"
     # self.history = None  # 0..1 (один, опционально);
     # self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
 

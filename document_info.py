@@ -9,6 +9,8 @@ from date import Date
 from program_used import Program_Used
 from src_url import Src_Url
 from src_ocr import Src_Ocr
+from Id import Id
+from version import Version
 
 
 class Document_Info:
@@ -36,9 +38,9 @@ class Document_Info:
         self.date = Date()  # 1 (один, обязателен);
         self.src_url = Src_Url()  # 0..n (любое число, опционально);
         self.__src_ocr = None  # 0..1 (один, опционально);
-        self.id = None  # 1 (один, обязателен);
-        self.version = None  # 1 (один, обязателен);
-        self.__historyhistory = None  # 0..1 (один, опционально);
+        self.id = Id()  # 1 (один, обязателен);
+        self.version = Version()  # 1 (один, обязателен);
+        self.__history = None  # 0..1 (один, опционально);
         self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
 
     def get_program_used(self):
@@ -65,9 +67,9 @@ class Document_Info:
         if self.__src_ocr:
             source += self.__src_ocr.get_source()
 
-        # source += self.id.get_source()
-        # source += self.version.get_source()
-        #
+        source += self.id.get_source()
+        source += self.version.get_source()
+
         # if self.__history:
         #     source += self.__history.get_source()
         #
