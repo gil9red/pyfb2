@@ -86,6 +86,13 @@ if __name__ == '__main__':
     document_info.publisher.append(p2)
 
 
+    publish_info = book.description.publish_info
+    publish_info.book_name.lang = "ru"
+    publish_info.book_name.text = "!Мое! произведение"
+    publish_info.publisher.lang = "ru"
+    publish_info.publisher.text = "ПрофОригНаф"
+
+
     book.binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
     book.binary.append("im_1", "image/png", "DhAAAAAQ")
 
