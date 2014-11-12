@@ -1,13 +1,18 @@
+__author__ = 'ipetrash'
+
+
 from author import AuthorItem
 from publisher_doc_info import PublisherItem
 from translator import TranslatorItem
 
 import fb2
 
-__author__ = 'ipetrash'
 
 # TODO: xml:lang = http://htmlbook.ru/html/value/lang
 # http://www.fictionbook.org/index.php/Пример_документа_в_FB2
+
+# TODO: лучше бы в каждый модуль добавить ссылку на сайт создателей,
+# на определенный элемент fb2.
 
 
 if __name__ == '__main__':
