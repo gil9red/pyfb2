@@ -4,9 +4,10 @@ __author__ = 'ipetrash'
 from image import Image
 from title import Title
 from section import Section
+from epigraph import Epigraph
 
 
-class Body:
+class BodyItem:
     """"""
 
     # Атрибуты
@@ -55,13 +56,15 @@ class Body:
     #  </section>
     # </body>
 
+    # TODO: доделать
+
     def __init__(self):
         self.name = None
         self.lang = None
         self.__image = None  # 0..1 (один, опционально)
         self.__title = None  # 0..1 (один, опционально)
-        self.epigraph = []  # 0..n (любое число, опционально)
-        self.section = [Section()]  # 1..n (любое число, один обязaтелен)
+        self.epigraph = Epigraph()  # 0..n (любое число, опционально) # TODO: доделать
+        self.section = Section()  # 1..n (любое число, один обязaтелен) # TODO: доделать
 
     def get_image(self):
         if not self.__image:
@@ -79,7 +82,6 @@ class Body:
         source = '<body'
         if self.name:
             source += ' name="{}"'.format(self.name)
-
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
         source += '>'
@@ -90,11 +92,30 @@ class Body:
         if self.__title:
             source += self.__title.get_source()
 
-        for e in self.epigraph:
-            source += e.get_source()
-
-        for s in self.section:
-            source += s.get_source()
-
+        source += self.epigraph.get_source()
+        source += self.section.get_source()
         source += '</body>'
+        return source
+
+
+class Body:
+    """"""
+
+    # TODO: доделать
+
+    def __init__(self):
+        self.list = []
+
+    def append(self):
+        item = BodyItem()
+        self.list.append(item)
+
+    def get_source(self):
+        # TODO: проверять на пустоту список body
+        # как минимум одно тело должно быть
+
+        source = ''
+        for b in self.list:
+            source += b.get_source()
+
         return source
