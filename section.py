@@ -1,6 +1,9 @@
 __author__ = 'ipetrash'
 
 
+""""""
+
+
 class Section:
     """"""
 
@@ -35,8 +38,18 @@ class Section:
     #   <section>.
 
     def __init__(self):
-        pass
+        self.id = None
+        self.lang = None
+        # TODO: добавить подчиненные элементы
 
     def get_source(self):
         # TODO: доделать
-        return '<section></section>'
+        source = '<section'
+        if self.id:
+            source += ' id="{}"'.format(self.id)
+        if self.lang:
+            source += ' xml:lang="{}"'.format(self.lang)
+        source += '>'
+
+        source += '</section>'
+        return source
