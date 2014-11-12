@@ -1,5 +1,4 @@
 from author import AuthorItem
-from program_used import Program_Used
 from translator import TranslatorItem
 
 import fb2
@@ -66,7 +65,9 @@ if __name__ == '__main__':
     document_info.src_ocr.text = "Vasya Pupkin"
     document_info.id.value = "C03EEC10-4053-4913-86D0-F379926F3487"
     document_info.version.value = "1.0"
-    # self.history = None  # 0..1 (один, опционально);
+    document_info.history.text = "<p>Первая версия.</p>"
+    document_info.history.id = "112211"
+    document_info.history.lang = "ru"
     # self.publisher = None  # 0..n (любое число, опционально) с версии 2.2.
 
 
