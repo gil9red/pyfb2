@@ -8,6 +8,7 @@ from sequence import Sequence
 from book_name import Book_Name
 import publisher_pub_info
 from city import City
+from year import Year
 
 
 class Publish_Info:
@@ -71,12 +72,12 @@ class Publish_Info:
         return self.__city
     city = property(get_city)
 
-    # def get_year(self):
-    #     if not self.__year:
-    #         self.__year = Year()
-    #     return self.__year
-    # year = property(get_year)
-    #
+    def get_year(self):
+        if not self.__year:
+            self.__year = Year()
+        return self.__year
+    year = property(get_year)
+
     # def get_isbn(self):
     #     if not self.__isbn:
     #         self.__isbn = Isbn()
