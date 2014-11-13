@@ -55,6 +55,7 @@ if __name__ == '__main__':
     from image import Image
     im = Image()
     im.href = "cover"
+    im.alt = "Cover image"
     title_info.coverpage.append(im)
 
 
@@ -105,6 +106,7 @@ if __name__ == '__main__':
 
 
     body = book.body
+    body.doc.image = im
     body.notes
     body.comments
     body.append("custom")

@@ -70,7 +70,9 @@ class BodyItem:
         if not self.__image:
             self.__image = Image()
         return self.__image
-    image = property(get_image)
+    def set_image(self, im):
+        self.__image = im
+    image = property(get_image, set_image)
 
     def get_title(self):
         if not self.__title:
