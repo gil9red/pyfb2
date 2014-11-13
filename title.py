@@ -5,6 +5,7 @@ __author__ = 'ipetrash'
 
 
 from empty_line import Empty_Line
+from paragraph import Paragraph
 
 
 class Title:
@@ -36,8 +37,13 @@ class Title:
         # Cписок может содержать параграфы (<p>) и пустые строки (<empty-line>)
         self.row_text = []
 
-    def append_paragraph(self, p):
-        self.row_text.append(p)
+    def append_paragraph(self, p=None):
+        if p:
+            self.row_text.append(p)
+        else:
+            p = Paragraph()
+            self.row_text.append(p)
+        return p
 
     def append_empty_line(self):
         self.row_text.append(Empty_Line())
