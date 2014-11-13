@@ -105,6 +105,9 @@ if __name__ == '__main__':
 
 
     body = book.body
+    body.notes
+    body.comments
+    body.append("custom")
 
 
     binary = book.binary
