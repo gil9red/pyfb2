@@ -4,6 +4,7 @@ __author__ = 'ipetrash'
 from author import AuthorItem
 from publisher_doc_info import PublisherItem
 from translator import TranslatorItem
+from paragraph import Paragraph
 
 import fb2
 
@@ -107,6 +108,13 @@ if __name__ == '__main__':
 
     body = book.body
     body.doc.image = im
+    body.doc.title.append_paragraph().text = "Первая глава"
+    body.doc.title.append_paragraph(Paragraph(text="Какой-то текст"))
+    body.doc.title.append_empty_line()
+    body.doc.title.append_paragraph(Paragraph("Еще текст..."))
+    bdt_p = Paragraph(id='001122abc', lang='ru')
+    bdt_p.text = "Много текста"
+    body.doc.title.append_paragraph(bdt_p)
     body.notes
     body.comments
     body.append("custom")
