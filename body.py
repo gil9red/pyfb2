@@ -104,17 +104,47 @@ class Body:
     # TODO: доделать
 
     def __init__(self):
+        self.doc = BodyItem()  # Основное тело, которое содержит текст документа fb2
+        self.__notes = None  # Тело, которое содержит примечания
+        self.__comments = None  # Тело, которое содержит комментарии
+
+        # Прочие body
         self.list = []
 
-    def append(self):
+    def get_notes(self):
+        if not self.__notes:
+            self.__notes = BodyItem()
+            self.__notes.name = "notes"
+        return self.__notes
+    notes = property(get_notes)
+
+    def get_comments(self):
+        if not self.__comments:
+            self.__comments = BodyItem()
+            self.__comments.name = "comments"
+        return self.__comments
+    comments = property(get_comments)
+
+    def append(self, name=None, lang=None):
+        """Функция для добавления пользовательского body.
+        Возвращает экземпляр body."""
+
         item = BodyItem()
+        item.lang = lang
+        item.name = name
+
         self.list.append(item)
+        return item
 
     def get_source(self):
-        # TODO: проверять на пустоту список body
-        # как минимум одно тело должно быть
+        source = self.doc.get_source()
 
-        source = ''
+        if self.__notes:
+            source += self.__notes.get_source()
+
+        if self.__comments:
+            source += self.__comments.get_source()
+
         for b in self.list:
             source += b.get_source()
 
