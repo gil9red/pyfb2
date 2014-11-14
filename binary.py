@@ -1,3 +1,5 @@
+from image import Image
+
 __author__ = 'ipetrash'
 
 
@@ -35,6 +37,9 @@ class BinaryItem:
         self.content_type = None
         self.data = None
 
+        # Ссылка на объект Image, связанный с данными бинарными данными
+        self.image = None
+
     def get_source(self):
         # TODO: проверять значения атрибутов
 
@@ -50,7 +55,7 @@ class Binary:
     # TODO: доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
 
     def append(self, id_bin, content_type_bin, data_bin):
         bin = BinaryItem()
@@ -58,11 +63,32 @@ class Binary:
         bin.content_type = content_type_bin
         bin.data = data_bin
 
-        self.list.append(bin)
+        self.__list.append(bin)
+        return bin
+
+    def append_image(self, im, content_type=None):
+        # Если не указан, определять вручную
+        if not content_type:
+            content_type = im.get_content_type()
+
+        # bin_id = 'im_{}'.format(len(self.__list))
+        if not im.href:
+            im.href = 'im_{}'.format(len(self.__list))
+
+        bin_id = im.href
+
+        # TODO: проверять bin_id
+
+        bin = self.append(bin_id, content_type, im.get_base64_source())
+        if bin.image:
+            print('У объекта binary={}, уже есть связанный с ним '
+                  'элемент image={}.'.format(bin, bin.image))
+        bin.image = im
+        return bin
 
     def get_source(self):
         source = ''
-        for b in self.list:
+        for b in self.__list:
             source += b.get_source()
 
         return source
