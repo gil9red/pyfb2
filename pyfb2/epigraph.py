@@ -1,6 +1,7 @@
 from pyfb2.cite import Cite
 from pyfb2.empty_line import Empty_Line
 from pyfb2.paragraph import Paragraph
+from pyfb2.poem import Poem
 from pyfb2.text_author import Text_Author
 
 __author__ = 'ipetrash'
@@ -53,8 +54,9 @@ class Epigraph:
         return p
 
     def append_poem(self):
-        # TODO: добавить
-        pass
+        p = Poem()
+        self.__list.append(p)
+        return p
 
     def append_cite(self):
         c = Cite()
@@ -75,9 +77,12 @@ class Epigraph:
         if self.id:
             source += ' id="{}"'.format(self.id)
         source += '>'
+
         for i in self.__list:
             source += i.get_source()
+
         for i in self.__text_authors:
             source += i.get_source()
+
         source += '</epigraph>'
         return source
