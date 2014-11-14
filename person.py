@@ -1,4 +1,4 @@
-from email import Email
+from email_fb2 import Email
 from home_page import Home_Page
 
 __author__ = 'ipetrash'
