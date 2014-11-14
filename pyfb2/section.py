@@ -47,9 +47,13 @@ class Section:
         source = '<section'
         if self.id:
             source += ' id="{}"'.format(self.id)
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
+
+        # source +=
 
         source += '</section>'
         return source
