@@ -1,5 +1,7 @@
 from pyfb2.empty_line import Empty_Line
 from pyfb2.paragraph import Paragraph
+from pyfb2.poem import Poem
+from pyfb2.subtitle import Subtitle
 from pyfb2.text_author import Text_Author
 
 __author__ = 'ipetrash'
@@ -50,27 +52,25 @@ class Cite:
         return p
 
     def append_subtitle(self):
-        pass
-        # s = Subtitle()
-        # self.__list.append(s)
-        # return s
+        s = Subtitle()
+        self.__list.append(s)
+        return s
 
     def append_empty_line(self):
         self.__list.append(Empty_Line())
 
     def append_poem(self):
-        pass
-        # TODO: добавить
-        # p = Poem()
-        # self.__list.append(p)
-        # return p
+        p = Poem()
+        self.__list.append(p)
+        return p
 
-    def append_table(self):
-        pass
-        # TODO: добавить
-        # t = Table()
-        # self.__list.append(t)
-        # return t
+    # TODO: 2.1
+    # def append_table(self):
+    #     pass
+    #     # TODO: добавить
+    #     # t = Table()
+    #     # self.__list.append(t)
+    #     # return t
 
     def append_text_author(self):
         ta = Text_Author()
