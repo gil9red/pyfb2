@@ -1,3 +1,6 @@
+from email import Email
+from home_page import Home_Page
+
 __author__ = 'ipetrash'
 
 
@@ -22,31 +25,11 @@ class PersonItem:
         self.middle_name = None
         self.last_name = None
         self.nickname = None
-        self.home_page = []
-        self.email = []
+        self.home_page = Home_Page()
+        self.email = Email()
         # TODO: 2.2 self.id = None
 
         self.name_tag = None
-
-    def add_home_page(self, value):
-        if value:
-            if isinstance(value, list):
-                self.home_page.extend(value)
-            else:
-                self.home_page.append(value)
-
-    def remove_home_page(self, value):
-        self.home_page.remove(value)
-
-    def add_email(self, value):
-        if value:
-            if isinstance(value, list):
-                self.email.extend(value)
-            else:
-                self.email.append(value)
-
-    def remove_email(self, value):
-        self.email.remove(value)
 
     def get_source(self):
         # TODO: проверять наличие элементов
@@ -68,11 +51,8 @@ class PersonItem:
         if self.nickname:
             source += '<nickname>{}</nickname>'.format(self.nickname)
 
-        for hp in self.home_page:
-            source += '<home-page>{}</home-page>'.format(hp)
-
-        for e in self.email:
-            source += '<email>{}</email>'.format(e)
+        source += self.home_page.get_source()
+        source += self.email.get_source()
 
         # TODO: 2.2
         # if self.id:
