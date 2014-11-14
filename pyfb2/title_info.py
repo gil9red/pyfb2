@@ -72,17 +72,24 @@ class Title_Info:
         source += self.genre.get_source()
         source += self.author.get_source()
         source += self.book_title.get_source()
+
         if self.__annotation:
             source += self.__annotation.get_source()
+
         if self.__keywords:
             source += self.__keywords.get_source()
+
         if self.__date:
             source += self.__date.get_source()
+
         if self.__coverpage:
             source += self.__coverpage.get_source()
+
         source += self.lang.get_source()
+
         if self.__src_lang:
             source += self.__src_lang.get_source()
+
         source += self.translator.get_source()
         source += self.sequence.get_source()
         source += '</title-info>'
