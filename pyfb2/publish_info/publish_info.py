@@ -1,15 +1,16 @@
+from pyfb2.publish_info import publisher
+
 __author__ = 'ipetrash'
 
 
 """"""
 
 
-from sequence import Sequence
-from book_name import Book_Name
-import publisher_pub_info
-from city import City
-from year import Year
-from isbn import Isbn
+from pyfb2.sequence import Sequence
+from pyfb2.book_name import Book_Name
+from pyfb2.city import City
+from pyfb2.year import Year
+from pyfb2.isbn import Isbn
 
 
 class Publish_Info:
@@ -63,7 +64,7 @@ class Publish_Info:
 
     def get_publisher(self):
         if not self.__publisher:
-            self.__publisher = publisher_pub_info.Publisher()
+            self.__publisher = publisher.Publisher()
         return self.__publisher
     publisher = property(get_publisher)
 

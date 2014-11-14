@@ -1,5 +1,5 @@
-from email_fb2 import Email
-from home_page import Home_Page
+from pyfb2.email import Email
+from pyfb2.home_page import Home_Page
 
 __author__ = 'ipetrash'
 

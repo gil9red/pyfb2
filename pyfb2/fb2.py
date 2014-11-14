@@ -1,9 +1,10 @@
-from image import Image
-from stylesheet import Stylesheet
-from description import Description
-from body import Body
-from binary import Binary
 import os.path
+
+from pyfb2.image import Image
+from pyfb2.stylesheet import Stylesheet
+from pyfb2.description import Description
+from pyfb2.body import Body
+from pyfb2.binary import Binary
 
 
 __author__ = 'ipetrash'

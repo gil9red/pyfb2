@@ -1,6 +1,6 @@
-from empty_line import Empty_Line
-from paragraph import Paragraph
-from text_author import Text_Author
+from pyfb2.empty_line import Empty_Line
+from pyfb2.paragraph import Paragraph
+from pyfb2.text_author import Text_Author
 
 __author__ = 'ipetrash'
 

@@ -1,5 +1,3 @@
-from image import Image
-
 __author__ = 'ipetrash'
 
 

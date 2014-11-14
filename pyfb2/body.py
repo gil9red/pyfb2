@@ -1,10 +1,10 @@
 __author__ = 'ipetrash'
 
 
-from image import Image
-from title import Title
-from section import Section
-from epigraph import Epigraph
+from pyfb2.image import Image
+from pyfb2.title import Title
+from pyfb2.section import Section
+from pyfb2.epigraph import Epigraph
 
 
 class BodyItem:

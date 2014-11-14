@@ -4,8 +4,8 @@ __author__ = 'ipetrash'
 """"""
 
 
-from person import Person
-from person import PersonItem
+from pyfb2.person import Person
+from pyfb2.person import PersonItem
 
 
 class TranslatorItem(PersonItem):

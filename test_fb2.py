@@ -1,12 +1,11 @@
+# TODO: 2.2 from publisher_doc_info import PublisherIte
+from pyfb2.author import AuthorItem
+from pyfb2.translator import TranslatorItem
+from pyfb2.paragraph import Paragraph
+from pyfb2 import fb2
+
+
 __author__ = 'ipetrash'
-
-
-from author import AuthorItem
-# TODO: 2.2 from publisher_doc_info import PublisherItem
-from translator import TranslatorItem
-from paragraph import Paragraph
-
-import fb2
 
 
 # TODO: xml:lang = http://htmlbook.ru/html/value/lang

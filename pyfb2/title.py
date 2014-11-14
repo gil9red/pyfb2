@@ -4,8 +4,8 @@ __author__ = 'ipetrash'
 """"""
 
 
-from empty_line import Empty_Line
-from paragraph import Paragraph
+from pyfb2.empty_line import Empty_Line
+from pyfb2.paragraph import Paragraph
 
 
 class Title:

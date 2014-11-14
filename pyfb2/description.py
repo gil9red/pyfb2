@@ -4,10 +4,10 @@ __author__ = 'ipetrash'
 """"""
 
 
-from title_info import Title_Info
-from document_info import Document_Info
-from publish_info import Publish_Info
-from custom_info import Custom_Info
+from pyfb2.title_info import Title_Info
+from pyfb2.document_info.document_info import Document_Info
+from pyfb2.publish_info.publish_info import Publish_Info
+from pyfb2.custom_info import Custom_Info
 
 
 class Description:

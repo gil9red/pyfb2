@@ -4,14 +4,14 @@ __author__ = 'ipetrash'
 """"""
 
 
-from author import Author
-from date import Date
-from program_used import Program_Used
-from src_url import Src_Url
-from src_ocr import Src_Ocr
-from id_tag import Id
-from version import Version
-from history import History
+from pyfb2.author import Author
+from pyfb2.date import Date
+from pyfb2.program_used import Program_Used
+from pyfb2.src_url import Src_Url
+from pyfb2.src_ocr import Src_Ocr
+from pyfb2.id_tag import Id
+from pyfb2.version import Version
+from pyfb2.history import History
 # TODO: 2.2 import publisher_doc_info
 
 

@@ -1,17 +1,17 @@
 __author__ = 'ipetrash'
 
 
-from book_title import Book_Title
-from lang import Lang
-from keywords import Keywords
-from date import Date
-from src_lang import Src_Lang
-from coverpage import Coverpage
-from annotation import Annotation
-from sequence import Sequence
-from genre import Genre
-from author import Author
-from translator import Translator
+from pyfb2.book_title import Book_Title
+from pyfb2.lang import Lang
+from pyfb2.keywords import Keywords
+from pyfb2.date import Date
+from pyfb2.src_lang import Src_Lang
+from pyfb2.coverpage import Coverpage
+from pyfb2.annotation import Annotation
+from pyfb2.sequence import Sequence
+from pyfb2.genre import Genre
+from pyfb2.author import Author
+from pyfb2.translator import Translator
 
 
 class Title_Info:
