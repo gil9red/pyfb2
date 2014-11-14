@@ -68,7 +68,9 @@ if __name__ == '__main__':
     document_info.src_ocr.text = "Vasya Pupkin"
     document_info.id.value = "C03EEC10-4053-4913-86D0-F379926F3487"
     document_info.version.value = "1.0"
-    document_info.history.text = "<p>Первая версия.</p>"
+    document_info.history.append_paragraph().text = "Первая версия."
+    document_info.history.append_empty_line()
+    document_info.history.append_paragraph().text = "Бла-бла-бла."
     document_info.history.id = "112211"
     document_info.history.lang = "ru"
 
@@ -111,6 +113,9 @@ if __name__ == '__main__':
     bdt_p = Paragraph(id='001122abc', lang='ru')
     bdt_p.text = "Много текста"
     body.doc.title.append_paragraph(bdt_p)
+    body.doc.title.append_empty_line()
+    body.doc.title.append_paragraph(Paragraph('Текст после пустой строки'))
+
     body.notes
     body.comments
     body.append("custom")
