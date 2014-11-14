@@ -1,13 +1,15 @@
-__author__ = 'ipetrash'
-
-
-"""Модуль для создания документов FictionBook версии 2.0 (fb2)."""
-
-
+from image import Image
 from stylesheet import Stylesheet
 from description import Description
 from body import Body
 from binary import Binary
+import os.path
+
+
+__author__ = 'ipetrash'
+
+
+"""Модуль для создания документов FictionBook версии 2.0 (fb2)."""
 
 
 class FB2:
@@ -39,6 +41,20 @@ class FB2:
         self.description = Description()  # Одно и только одно вхождение
         self.body = Body()  # Одно или более вхождений
         self.binary = Binary()  # Любое число вхождений
+
+    def append_image(self, url=None, file_name=None):
+        """Создает и возращает объекты Image, связанный с ним объектом binary"""
+        im = Image()
+        im.url = url
+        im.file_name = file_name
+        if url:
+            im.href = os.path.basename(url)
+        elif file_name:
+            im.href = os.path.basename(file_name)
+
+        bin = self.binary.append_image(im)
+        im.binary = bin
+        return im
 
     def get_source(self):
         source_fb2 = ''
