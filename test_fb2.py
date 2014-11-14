@@ -42,9 +42,8 @@ if __name__ == '__main__':
     a.middle_name = "Andreevich"
     a.last_name = "Petrash"
     a.nickname = "gil9red"
-    a.add_home_page("https://github.com/gil9red")
-    a.add_home_page("http://vk.com/ipetrash")
-    a.add_email("ip1992@inbox.ru")
+    a.home_page.append(["https://github.com/gil9red", "http://vk.com/ipetrash"])
+    a.email.append("ip1992@inbox.ru")
     a.id = "777"
     title_info.author.append(a)
 
