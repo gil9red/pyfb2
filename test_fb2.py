@@ -37,10 +37,10 @@ if __name__ == '__main__':
     title_info.genre.append("detective", match=20)
 
     a = AuthorItem()
-    a.first_name = "Ilya"
-    a.middle_name = "Andreevich"
-    a.last_name = "Petrash"
-    a.nickname = "gil9red"
+    a.first_name.text = "Ilya"
+    a.middle_name.text = "Andreevich"
+    a.last_name.text = "Petrash"
+    a.nickname.text = "gil9red"
     a.home_page.append(["https://github.com/gil9red",
                         "http://vk.com/ipetrash"])
     a.email.append("ip1992@inbox.ru")
@@ -48,8 +48,8 @@ if __name__ == '__main__':
     title_info.author.append(a)
 
     t = TranslatorItem()
-    t.first_name = "Vasya"
-    t.last_name = "Pupkin"
+    t.first_name.text = "Vasya"
+    t.last_name.text = "Pupkin"
     title_info.translator.append(t)
 
 
@@ -74,13 +74,13 @@ if __name__ == '__main__':
 
     # TODO: 2.2
     # p1 = PublisherItem()
-    # p1.first_name = "Vasya"
-    # p1.last_name = "Pupkin"
+    # p1.first_name.text = "Vasya"
+    # p1.last_name.text = "Pupkin"
     # document_info.publisher.append(p1)
     #
     # p2 = PublisherItem()
-    # p2.first_name = "Ivan"
-    # p2.last_name = "Ivanov"
+    # p2.first_name.text = "Ivan"
+    # p2.last_name.text = "Ivanov"
     # document_info.publisher.append(p2)
 
 
@@ -117,5 +117,6 @@ if __name__ == '__main__':
 
 
     with open('pyfb2_test_fbdoc.fb2', mode='w', encoding='utf-8') as f:
-        f.write(book.get_source())
-        print(book.get_source())
+        fb2_source = book.get_source()
+        f.write(fb2_source)
+        print(fb2_source)
