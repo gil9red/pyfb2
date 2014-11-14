@@ -42,7 +42,8 @@ if __name__ == '__main__':
     a.middle_name = "Andreevich"
     a.last_name = "Petrash"
     a.nickname = "gil9red"
-    a.home_page.append(["https://github.com/gil9red", "http://vk.com/ipetrash"])
+    a.home_page.append(["https://github.com/gil9red",
+                        "http://vk.com/ipetrash"])
     a.email.append("ip1992@inbox.ru")
     a.id = "777"
     title_info.author.append(a)
@@ -52,11 +53,10 @@ if __name__ == '__main__':
     t.last_name = "Pupkin"
     title_info.translator.append(t)
 
-    from image import Image
-    im = Image()
-    im.href = "cover"
-    im.alt = "Cover image"
-    title_info.coverpage.append(im)
+
+    coverpage = title_info.coverpage
+    cover_im = book.append_image(file_name='test_fb2_im.png')
+    coverpage.append(cover_im)
 
 
     document_info = book.description.document_info
@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 
     body = book.body
-    body.doc.image = im
+    body.doc.image = book.append_image(file_name='test_fb2_im_2.png')
     body.doc.title.append_paragraph().text = "Первая глава"
     body.doc.title.append_paragraph(Paragraph(text="Какой-то текст"))
     body.doc.title.append_empty_line()
@@ -117,9 +117,6 @@ if __name__ == '__main__':
     body.append("custom")
 
 
-    binary = book.binary
-    binary.append(im.href, "image/jpeg", "/9j/4AAQSkZJRgABAgEAY")
-    binary.append("im_1", "image/png", "DhAAAAAQ")
-
-
-    print(book.get_source())
+    with open('pyfb2_test_fbdoc.fb2', mode='w', encoding='utf-8') as f:
+        f.write(book.get_source())
+        print(book.get_source())
