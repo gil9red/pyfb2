@@ -1,3 +1,9 @@
+from pyfb2.cite import Cite
+from pyfb2.empty_line import Empty_Line
+from pyfb2.paragraph import Paragraph
+from pyfb2.poem import Poem
+from pyfb2.subtitle import Subtitle
+
 __author__ = 'ipetrash'
 
 
@@ -13,7 +19,8 @@ class History:
     #
     # Поддерживается
     # Рядом ориентированных на FB2 ?читалок?.
-    # Хоть и не отображается в библиотеках, доступно для просмотра (и редактирования) в любом (в том числе и ориентированном на FB2) редакторе.
+    # Хоть и не отображается в библиотеках, доступно для просмотра (и редактирования)
+    # в любом (в том числе и ориентированном на FB2) редакторе.
     #
     # Атрибуты
     # id (опционально) - Идентификатор (якорь, метка) для ссылок на данный элемент.
@@ -40,10 +47,38 @@ class History:
     def __init__(self):
         self.id = None  # (опционально)
         self.lang = None  # (опционально)
-        self.text = None
+
+        self.__list = []
+
+    def append_paragraph(self):
+        i = Paragraph()
+        self.__list.append(i)
+        return i
+
+    def append_poem(self):
+        i = Poem()
+        self.__list.append(i)
+        return i
+
+    def append_cite(self):
+        i = Cite()
+        self.__list.append(i)
+        return i
+
+    def append_subtitle(self):
+        i = Subtitle()
+        self.__list.append(i)
+        return i
+
+    def append_empty_line(self):
+        self.__list.append(Empty_Line())
+
+    # # TODO: 2.1
+    # def append_table(self):
+    #     pass
 
     def get_source(self):
-        if not self.text:
+        if not self.__list:
             raise NameError('Нет содержимого тэга history.')
 
         source = '<history'
@@ -52,7 +87,11 @@ class History:
 
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
-        source += self.text
+
+        for i in self.__list:
+            source += i.get_source()
+
         source += '</history>'
         return source
