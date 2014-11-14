@@ -1,5 +1,9 @@
 from pyfb2.email import Email
+from pyfb2.first_name import First_Name
 from pyfb2.home_page import Home_Page
+from pyfb2.last_name import Last_Name
+from pyfb2.middle_name import Middle_Name
+from pyfb2.nickname import Nickname
 
 __author__ = 'ipetrash'
 
@@ -21,15 +25,39 @@ class PersonItem:
     # <id> - 0..1 (один, опционально) с версии 2.2 - идентификатор автора, присваивается библиотекой.
 
     def __init__(self):
-        self.first_name = None
-        self.middle_name = None
-        self.last_name = None
-        self.nickname = None
+        self.__first_name = None
+        self.__middle_name = None
+        self.__last_name = None
+        self.__nickname = None
         self.home_page = Home_Page()
         self.email = Email()
         # TODO: 2.2 self.id = None
 
         self.name_tag = None
+
+    def get_first_name(self):
+        if not self.__first_name:
+            self.__first_name = First_Name()
+        return self.__first_name
+    first_name = property(get_first_name)
+
+    def get_middle_name(self):
+        if not self.__middle_name:
+            self.__middle_name = Middle_Name()
+        return self.__middle_name
+    middle_name = property(get_middle_name)
+
+    def get_last_name(self):
+        if not self.__last_name:
+            self.__last_name = Last_Name()
+        return self.__last_name
+    last_name = property(get_last_name)
+
+    def get_nickname(self):
+        if not self.__nickname:
+            self.__nickname = Nickname()
+        return self.__nickname
+    nickname = property(get_nickname)
 
     def get_source(self):
         # TODO: проверять наличие элементов
@@ -39,17 +67,17 @@ class PersonItem:
 
         source = '<{}>'.format(self.name_tag)
 
-        if self.first_name:
-            source += '<first-name>{}</first-name>'.format(self.first_name)
+        if self.__first_name:
+            source += self.__first_name.get_source()
 
-        if self.middle_name:
-            source += '<middle-name>{}</middle-name>'.format(self.middle_name)
+        if self.__middle_name:
+            source += self.__middle_name.get_source()
 
-        if self.last_name:
-            source += '<last-name>{}</last-name>'.format(self.last_name)
+        if self.__last_name:
+            source += self.__last_name.get_source()
 
-        if self.nickname:
-            source += '<nickname>{}</nickname>'.format(self.nickname)
+        if self.__nickname:
+            source += self.__nickname.get_source()
 
         source += self.home_page.get_source()
         source += self.email.get_source()
