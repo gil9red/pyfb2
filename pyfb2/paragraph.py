@@ -56,11 +56,16 @@ class Paragraph:
         source = '<p'
         if self.id:
             source += ' id="{}"'.format(self.id)
+
         if self.style:
             source += ' style="{}"'.format(self.style)
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
+
         source += self.text
+
         source += '</p>'
         return source
