@@ -24,7 +24,7 @@ class PersonItem:
         self.nickname = None
         self.home_page = []
         self.email = []
-        self.id = None
+        # TODO: 2.2 self.id = None
 
         self.name_tag = None
 
@@ -74,8 +74,9 @@ class PersonItem:
         for e in self.email:
             source += '<email>{}</email>'.format(e)
 
-        if self.id:
-            source += '<id>{}</id>'.format(self.id)
+        # TODO: 2.2
+        # if self.id:
+        #     source += '<id>{}</id>'.format(self.id)
 
         source += '</{}>'.format(self.name_tag)
         return source

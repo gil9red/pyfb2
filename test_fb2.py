@@ -2,7 +2,7 @@ __author__ = 'ipetrash'
 
 
 from author import AuthorItem
-from publisher_doc_info import PublisherItem
+# TODO: 2.2 from publisher_doc_info import PublisherItem
 from translator import TranslatorItem
 from paragraph import Paragraph
 
@@ -63,11 +63,8 @@ if __name__ == '__main__':
     document_info = book.description.document_info
     document_info.author.append(a)
     document_info.program_used.lang = "en"
-    document_info.program_used.append("opera")
-    document_info.program_used.append(["word", "notepad"])
-    document_info.program_used.append(["IE", "word", "notepad"])
+    document_info.program_used.append(["opera", "word", "notepad"])
     document_info.date.set_date(12, 11, 2014)
-    document_info.src_url.append("www.vk.com")
     document_info.src_url.append(["www.vk.com", "www.wiki.org", "www.bash.im"])
     document_info.src_ocr.lang = "ru"
     document_info.src_ocr.text = "Vasya Pupkin"
@@ -77,15 +74,16 @@ if __name__ == '__main__':
     document_info.history.id = "112211"
     document_info.history.lang = "ru"
 
-    p1 = PublisherItem()
-    p1.first_name = "Vasya"
-    p1.last_name = "Pupkin"
-    document_info.publisher.append(p1)
-
-    p2 = PublisherItem()
-    p2.first_name = "Ivan"
-    p2.last_name = "Ivanov"
-    document_info.publisher.append(p2)
+    # TODO: 2.2
+    # p1 = PublisherItem()
+    # p1.first_name = "Vasya"
+    # p1.last_name = "Pupkin"
+    # document_info.publisher.append(p1)
+    #
+    # p2 = PublisherItem()
+    # p2.first_name = "Ivan"
+    # p2.last_name = "Ivanov"
+    # document_info.publisher.append(p2)
 
 
     publish_info = book.description.publish_info
