@@ -4,6 +4,7 @@ from pyfb2.poem import Poem
 from pyfb2.subtitle import Subtitle
 from pyfb2.text_author import Text_Author
 
+
 __author__ = 'ipetrash'
 
 
@@ -46,23 +47,32 @@ class Cite:
         self.__list = []
         self.__text_authors = []
 
-    def append_paragraph(self):
-        p = Paragraph()
-        self.__list.append(p)
-        return p
+    def append_paragraph(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Paragraph()
+            self.__list.append(p)
+            return p
 
-    def append_subtitle(self):
-        s = Subtitle()
-        self.__list.append(s)
-        return s
+    def append_subtitle(self, s=None):
+        if s:
+            self.__list.append(s)
+        else:
+            s = Subtitle()
+            self.__list.append(s)
+            return s
 
     def append_empty_line(self):
         self.__list.append(Empty_Line())
 
-    def append_poem(self):
-        p = Poem()
-        self.__list.append(p)
-        return p
+    def append_poem(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Poem()
+            self.__list.append(p)
+            return p
 
     # TODO: 2.1
     # def append_table(self):
@@ -72,17 +82,23 @@ class Cite:
     #     # self.__list.append(t)
     #     # return t
 
-    def append_text_author(self):
-        ta = Text_Author()
-        self.__text_authors.append(ta)
-        return ta
+    def append_text_author(self, ta=None):
+        if ta:
+            self.__text_authors.append(ta)
+        else:
+            ta = Text_Author()
+            self.__text_authors.append(ta)
+            return ta
 
     def get_source(self):
         source = '<cite'
+
         if self.id:
             source += ' id="{}"'.format(self.id)
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
 
         for i in self.__list:
