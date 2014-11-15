@@ -1,10 +1,13 @@
-__author__ = 'ipetrash'
-
-
 from pyfb2.image import Image
 from pyfb2.title import Title
 from pyfb2.section import Section
 from pyfb2.epigraph import Epigraph
+
+
+__author__ = 'ipetrash'
+
+
+""""""
 
 
 class BodyItem:
@@ -63,8 +66,8 @@ class BodyItem:
         self.lang = None
         self.__image = None  # 0..1 (один, опционально)
         self.__title = None  # 0..1 (один, опционально)
-        self.epigraph = Epigraph()  # 0..n (любое число, опционально) # TODO: доделать
-        self.section = Section()  # 1..n (любое число, один обязaтелен) # TODO: доделать
+        self.epigraph = Epigraph()  # 0..n (любое число, опционально)
+        self.section = Section()  # 1..n (любое число, один обязaтелен)
 
     def get_image(self):
         if not self.__image:
@@ -82,10 +85,13 @@ class BodyItem:
 
     def get_source(self):
         source = '<body'
+
         if self.name:
             source += ' name="{}"'.format(self.name)
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
 
         if self.__image:
@@ -111,7 +117,7 @@ class Body:
         self.__comments = None  # Тело, которое содержит комментарии
 
         # Прочие body
-        self.list = []
+        self.__list = []
 
     def get_notes(self):
         if not self.__notes:
@@ -135,7 +141,7 @@ class Body:
         item.lang = lang
         item.name = name
 
-        self.list.append(item)
+        self.__list.append(item)
         return item
 
     def get_source(self):
@@ -147,7 +153,7 @@ class Body:
         if self.__comments:
             source += self.__comments.get_source()
 
-        for b in self.list:
+        for b in self.__list:
             source += b.get_source()
 
         return source
