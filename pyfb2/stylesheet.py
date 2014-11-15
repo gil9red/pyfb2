@@ -63,14 +63,16 @@ class Stylesheet:
     # TODO: доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
 
     def append(self, type_stylesheet, text_stylesheet):
-        self.list.append(StylesheetItem(type_stylesheet, text_stylesheet))
+        ssi = StylesheetItem(type_stylesheet, text_stylesheet)
+        self.__list.append(ssi)
+        return ssi
 
     def get_source(self):
         source = ''
-        for s in self.list:
+        for s in self.__list:
             source += s.get_source()
 
         return source
