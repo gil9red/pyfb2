@@ -5,6 +5,7 @@ from pyfb2.last_name import Last_Name
 from pyfb2.middle_name import Middle_Name
 from pyfb2.nickname import Nickname
 
+
 __author__ = 'ipetrash'
 
 
@@ -96,22 +97,22 @@ class Person:
     # TODO: доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
         self.exteption_text_when_empty = None
 
     def append(self, person):
-        self.list.append(person)
+        self.__list.append(person)
 
     def get_source(self):
         if not self.exteption_text_when_empty:
             raise NameError("Нет текста для исключения при пустом списке.")
 
         # Список авторов должен иметь как минимум один элемент
-        if not self.list:
+        if not self.__list:
             raise NameError(self.exteption_text_when_empty)
 
         source = ''
-        for p in self.list:
+        for p in self.__list:
             source += p.get_source()
 
         return source
