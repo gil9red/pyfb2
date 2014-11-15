@@ -123,11 +123,17 @@ if __name__ == '__main__':
     body.doc.epigraph.append_paragraph().text = '— Свои, проходи! Бутылка, стой!'
     body.doc.epigraph.append_text_author().text = 'anekdotov.net'
 
-    body.doc.section.append_paragraph().text = 'Первая строка главы...'
-    body.doc.section.append_paragraph().text = 'Вторая строка главы...'
+    section1 = body.doc.section.append()
+    section1.title.append_paragraph().text = 'Первая глава'
+    section1.append_paragraph().text = 'Первая строка главы...'
+    section1.append_paragraph().text = 'Вторая строка главы...'
     im = book.append_image(url='http://d.readmanga.ru/uploads/pics/00/46/014_o.jpg')
-    body.doc.section.append_image(im)
-    body.doc.section.append_paragraph().text = 'Третья строка главы...'
+    section1.append_image(im)
+    section1.append_paragraph().text = 'Третья строка главы...'
+
+    section2 = body.doc.section.append()
+    section2.title.append_paragraph().text = 'Вторая глава'
+    section2.append_paragraph().text = 'Фап-фап-фап...'
 
 
     body.notes
