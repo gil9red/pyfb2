@@ -48,6 +48,7 @@ class FB2:
         im = Image()
         im.url = url
         im.file_name = file_name
+
         if url:
             im.href = os.path.basename(url)
         elif file_name:
