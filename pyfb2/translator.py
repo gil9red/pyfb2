@@ -1,11 +1,11 @@
+from pyfb2.person import Person
+from pyfb2.person import PersonItem
+
+
 __author__ = 'ipetrash'
 
 
 """"""
-
-
-from pyfb2.person import Person
-from pyfb2.person import PersonItem
 
 
 class TranslatorItem(PersonItem):
@@ -37,11 +37,11 @@ class Translator(Person):
     def get_source(self):
         # Список переводчиков необязательный, поэтому обойдемся
         # без выбрасывания исключения и просто выйдем, если список пуст
-        if not self.list:
+        if not self.__list:
             return ''
 
         source = ''
-        for p in self.list:
+        for p in self.__list:
             source += p.get_source()
 
         return source
