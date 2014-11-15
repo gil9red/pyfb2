@@ -1,3 +1,4 @@
+from pyfb2.annotation import Annotation
 from pyfb2.cite import Cite
 from pyfb2.empty_line import Empty_Line
 from pyfb2.epigraph import Epigraph
@@ -5,6 +6,7 @@ from pyfb2.image import Image
 from pyfb2.paragraph import Paragraph
 from pyfb2.poem import Poem
 from pyfb2.subtitle import Subtitle
+from pyfb2.title import Title
 
 __author__ = 'ipetrash'
 
@@ -12,7 +14,7 @@ __author__ = 'ipetrash'
 """"""
 
 
-class Section:
+class SectionItem:
     """"""
 
     # Описание
@@ -45,6 +47,8 @@ class Section:
     #   <body>;
     #   <section>.
 
+    # TODO: доделать
+
     def __init__(self):
         self.id = None
         self.lang = None
@@ -57,30 +61,29 @@ class Section:
         self.__sub_sections = []  # список вложенных секций (5.1)
         self.__sub_elements = []  # список элементов: p, image, poem и т.п. (5.2)
 
-        # Должен содержать последовательность элементов в таком порядке:
-        #   1. <title> 0..1 (опционально);
-        #   2. <epigraph> 0..n (любое число, опционально);
-        #   3. <image> 0..1 (опционально);
-        #   4. <annotation> 0..1 (опционально);
-        #   5. Один из вариантов,
-        #     5.1. либо вложенные секции:
-        #       5.1.1 <section> - (любое число, обязательно);
-        #     5.2. либо произвольный набор (в произвольном количестве) из следующих элементов:
-        #       5.2.1 <p>;
-        #       5.2.2 <image>;
-        #       5.2.3 <poem>;
-        #       5.2.4 <subtitle>;
-        #       5.2.5 <cite>;
-        #       5.2.6 <empty-line>;
-        #       5.2.7 <table>.
+    def get_title(self):
+        if not self.__title:
+            self.__title = Title()
+        return self.__title
+    title = property(get_title)
 
-        # TODO: добавить подчиненные элементы
+    def get_image(self):
+        if not self.__image:
+            self.__image = Image()
+        return self.__image
+    image = property(get_image)
+
+    def get_annotation(self):
+        if not self.__annotation:
+            self.__annotation = Annotation()
+        return self.__annotation
+    annotation = property(get_annotation)
 
     def append_sub_section(self, s=None):
         if s:
             self.__sub_sections.append(s)
         else:
-            s = Section()
+            s = SectionItem()
             self.__sub_sections.append(s)
             return s
 
@@ -167,4 +170,29 @@ class Section:
             source += i.get_source()
 
         source += '</section>'
+        return source
+
+
+class Section:
+    """"""
+
+    # TODO: доделать
+
+    def __init__(self):
+        self.__list = []
+
+    def append(self, s=None):
+        if s:
+            self.__list.append(s)
+        else:
+            s = SectionItem()
+            self.__list.append(s)
+            return s
+
+    def get_source(self):
+        source = ''
+
+        for i in self.__list:
+            source += i.get_source()
+
         return source
