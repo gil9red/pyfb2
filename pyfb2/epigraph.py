@@ -4,6 +4,7 @@ from pyfb2.paragraph import Paragraph
 from pyfb2.poem import Poem
 from pyfb2.text_author import Text_Author
 
+
 __author__ = 'ipetrash'
 
 
@@ -48,34 +49,47 @@ class Epigraph:
         self.__list = []
         self.__text_authors = []
 
-    def append_paragraph(self):
-        p = Paragraph()
-        self.__list.append(p)
-        return p
+    def append_paragraph(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Paragraph()
+            self.__list.append(p)
+            return p
 
-    def append_poem(self):
-        p = Poem()
-        self.__list.append(p)
-        return p
+    def append_poem(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Poem()
+            self.__list.append(p)
+            return p
 
-    def append_cite(self):
-        c = Cite()
-        self.__list.append(c)
-        return c
+    def append_cite(self, c=None):
+        if c:
+            self.__list.append(c)
+        else:
+            c = Cite()
+            self.__list.append(c)
+            return c
 
     def append_empty_line(self):
-        el = Empty_Line()
-        self.__list.append(el)
+        self.__list.append(Empty_Line())
 
-    def append_text_author(self):
-        ta = Text_Author()
-        self.__text_authors.append(ta)
-        return ta
+    def append_text_author(self, ta=None):
+        if ta:
+            self.__text_authors.append(ta)
+        else:
+            ta = Text_Author()
+            self.__text_authors.append(ta)
+            return ta
 
     def get_source(self):
         source = '<epigraph'
+
         if self.id:
             source += ' id="{}"'.format(self.id)
+
         source += '>'
 
         for i in self.__list:
