@@ -3,7 +3,6 @@ from pyfb2.title import Title
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -72,12 +71,14 @@ class Poem:
         if not self.__title:
             self.__title = Title()
         return self.__title
+
     title = property(get_title)
 
     def get_date(self):
         if not self.__date:
             self.__date = Date()
         return self.__date
+
     date = property(get_date)
 
     def get_source(self):

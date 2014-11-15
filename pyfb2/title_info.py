@@ -1,6 +1,5 @@
 __author__ = 'ipetrash'
 
-
 from pyfb2.book_title import Book_Title
 from pyfb2.lang import Lang
 from pyfb2.keywords import Keywords
@@ -40,30 +39,35 @@ class Title_Info:
         if not self.__annotation:
             self.__annotation = Annotation()
         return self.__annotation
+
     annotation = property(get_annotation)
 
     def get_keywords(self):
         if not self.__keywords:
             self.__keywords = Keywords()
         return self.__keywords
+
     keywords = property(get_keywords)
 
     def get_date(self):
         if not self.__date:
             self.__date = Date()
         return self.__date
+
     date = property(get_date)
 
     def get_coverpage(self):
         if not self.__coverpage:
             self.__coverpage = Coverpage()
         return self.__coverpage
+
     coverpage = property(get_coverpage)
 
     def get_src_lang(self):
         if not self.__src_lang:
             self.__src_lang = Src_Lang()
         return self.__src_lang
+
     src_lang = property(get_src_lang)
 
     def get_source(self):

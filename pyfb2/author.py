@@ -1,8 +1,6 @@
 __author__ = 'ipetrash'
 
-
 """"""
-
 
 from pyfb2.person import Person
 from pyfb2.person import PersonItem
@@ -14,8 +12,8 @@ class AuthorItem(PersonItem):
 
     # Пример использования
     # <author>
-    #   <first-name>Борис</first-name>
-    #   <last-name>Сергеев</last-name>
+    # <first-name>Борис</first-name>
+    # <last-name>Сергеев</last-name>
     # </author>
 
     def __init__(self):

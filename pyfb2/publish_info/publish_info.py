@@ -2,9 +2,7 @@ from pyfb2.publish_info import publisher
 
 __author__ = 'ipetrash'
 
-
 """"""
-
 
 from pyfb2.sequence import Sequence
 from pyfb2.book_name import Book_Name
@@ -39,8 +37,8 @@ class Publish_Info:
     #
     # Пример использования
     # <publish-info>
-    #  <book-name>Долгин А.Б. Экономика символического обмена</book-name>
-    #  <publisher>Инфра-М</publisher>
+    # <book-name>Долгин А.Б. Экономика символического обмена</book-name>
+    # <publisher>Инфра-М</publisher>
     #  <city>Москва</city>
     #  <year>2006</year>
     #  <isbn>5-16-002911-7</isbn>
@@ -60,30 +58,35 @@ class Publish_Info:
         if not self.__book_name:
             self.__book_name = Book_Name()
         return self.__book_name
+
     book_name = property(get_book_name)
 
     def get_publisher(self):
         if not self.__publisher:
             self.__publisher = publisher.Publisher()
         return self.__publisher
+
     publisher = property(get_publisher)
 
     def get_city(self):
         if not self.__city:
             self.__city = City()
         return self.__city
+
     city = property(get_city)
 
     def get_year(self):
         if not self.__year:
             self.__year = Year()
         return self.__year
+
     year = property(get_year)
 
     def get_isbn(self):
         if not self.__isbn:
             self.__isbn = Isbn()
         return self.__isbn
+
     isbn = property(get_isbn)
 
     def get_source(self):

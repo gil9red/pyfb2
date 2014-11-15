@@ -1,6 +1,5 @@
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -24,8 +23,8 @@ class Middle_Name:
     #
     # Пример использования
     # <author>
-    #   <first-name>Robert</first-name>
-    #   <middle-name>Anson</middle-name>
+    # <first-name>Robert</first-name>
+    # <middle-name>Anson</middle-name>
     #   <last-name>Heinlein</last-name>
     # </author>
 

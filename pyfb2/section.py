@@ -10,7 +10,6 @@ from pyfb2.title import Title
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -26,8 +25,8 @@ class SectionItem:
     #
     # Подчиненные элементы
     # Должен содержать последовательность элементов в таком порядке:
-    #   1. <title> 0..1 (опционально);
-    #   2. <epigraph> 0..n (любое число, опционально);
+    # 1. <title> 0..1 (опционально);
+    # 2. <epigraph> 0..n (любое число, опционально);
     #   3. <image> 0..1 (опционально);
     #   4. <annotation> 0..1 (опционально);
     #   5. Один из вариантов,
@@ -65,18 +64,21 @@ class SectionItem:
         if not self.__title:
             self.__title = Title()
         return self.__title
+
     title = property(get_title)
 
     def get_image(self):
         if not self.__image:
             self.__image = Image()
         return self.__image
+
     image = property(get_image)
 
     def get_annotation(self):
         if not self.__annotation:
             self.__annotation = Annotation()
         return self.__annotation
+
     annotation = property(get_annotation)
 
     def append_sub_section(self, s=None):

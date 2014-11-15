@@ -4,7 +4,6 @@ from pyfb2.paragraph import Paragraph
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 

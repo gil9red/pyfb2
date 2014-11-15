@@ -1,8 +1,6 @@
 __author__ = 'ipetrash'
 
-
 """"""
-
 
 from pyfb2.title_info import Title_Info
 from pyfb2.document_info.document_info import Document_Info
@@ -51,6 +49,7 @@ class Description:
         if not self.__publish_info:
             self.__publish_info = Publish_Info()
         return self.__publish_info
+
     publish_info = property(get_publish_info)
 
     def get_source(self):

@@ -7,7 +7,6 @@ from pyfb2.subtitle import Subtitle
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -88,7 +87,7 @@ class History:
 
     # # TODO: 2.1
     # def append_table(self):
-    #     pass
+    # pass
 
     def get_source(self):
         if not self.__list:

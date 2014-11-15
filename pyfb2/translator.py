@@ -4,7 +4,6 @@ from pyfb2.person import PersonItem
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -14,8 +13,8 @@ class TranslatorItem(PersonItem):
 
     # Пример использования
     # <translator>
-    #   <first-name>Борис</first-name>
-    #   <last-name>Сергеев</last-name>
+    # <first-name>Борис</first-name>
+    # <last-name>Сергеев</last-name>
     # </translator>
 
     # TODO: доделать

@@ -1,7 +1,14 @@
 __author__ = 'ipetrash'
 
-
 """"""
+
+
+# http://htmlbook.ru/html/value/lang
+
+# class Lang(enum.Enum):
+# ru = "ru"
+# en = "en"
+# jp = "jp"
 
 
 class Last_Name:
@@ -24,7 +31,7 @@ class Last_Name:
     #
     # Пример использования
     # <author>
-    #   <first-name>Robert</first-name>
+    # <first-name>Robert</first-name>
     #   <middle-name>Anson</middle-name>
     #   <last-name>Heinlein</last-name>
     # </author>
@@ -40,9 +47,13 @@ class Last_Name:
             raise NameError('Не указано фамилия автора, переводчика или правообладателя.')
 
         source = '<last-name'
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
+
         source += self.text
+
         source += '</last-name>'
         return source

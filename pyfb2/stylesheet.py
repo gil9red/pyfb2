@@ -1,6 +1,5 @@
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -24,8 +23,8 @@ class StylesheetItem:
     # Пример использования
     # Пример 1.
     # <stylesheet type="text/css">
-    #     body{
-    #         text-align:justify
+    # body{
+    # text-align:justify
     #     }
     #     div.stanza{
     #         margin: 0.4em 0em 0.4em 1em;

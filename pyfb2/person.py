@@ -8,7 +8,6 @@ from pyfb2.nickname import Nickname
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -40,24 +39,28 @@ class PersonItem:
         if not self.__first_name:
             self.__first_name = First_Name()
         return self.__first_name
+
     first_name = property(get_first_name)
 
     def get_middle_name(self):
         if not self.__middle_name:
             self.__middle_name = Middle_Name()
         return self.__middle_name
+
     middle_name = property(get_middle_name)
 
     def get_last_name(self):
         if not self.__last_name:
             self.__last_name = Last_Name()
         return self.__last_name
+
     last_name = property(get_last_name)
 
     def get_nickname(self):
         if not self.__nickname:
             self.__nickname = Nickname()
         return self.__nickname
+
     nickname = property(get_nickname)
 
     def get_source(self):
@@ -85,7 +88,7 @@ class PersonItem:
 
         # TODO: 2.2
         # if self.id:
-        #     source += '<id>{}</id>'.format(self.id)
+        # source += '<id>{}</id>'.format(self.id)
 
         source += '</{}>'.format(self.name_tag)
         return source

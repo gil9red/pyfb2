@@ -9,7 +9,6 @@ from pyfb2.binary import Binary
 
 __author__ = 'ipetrash'
 
-
 """Модуль для создания документов FictionBook версии 2.0 (fb2)."""
 
 
@@ -70,5 +69,6 @@ class FB2:
         source_fb2 += '</FictionBook>'
 
         from xml.dom.minidom import parseString
+
         source_fb2 = parseString(source_fb2).toprettyxml(indent='  ')
         return source_fb2

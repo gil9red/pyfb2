@@ -6,7 +6,6 @@ from pyfb2.epigraph import Epigraph
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -42,8 +41,8 @@ class BodyItem:
     #
     # Пример использования
     # <body name="notes">
-    #  <title><p>Примечания</p></title>
-    #  <section id="note1">
+    # <title><p>Примечания</p></title>
+    # <section id="note1">
     #   <title>
     #    <p>1</p>
     #   </title>
@@ -73,14 +72,17 @@ class BodyItem:
         if not self.__image:
             self.__image = Image()
         return self.__image
+
     def set_image(self, im):
         self.__image = im
+
     image = property(get_image, set_image)
 
     def get_title(self):
         if not self.__title:
             self.__title = Title()
         return self.__title
+
     title = property(get_title)
 
     def get_source(self):
@@ -124,6 +126,7 @@ class Body:
             self.__notes = BodyItem()
             self.__notes.name = "notes"
         return self.__notes
+
     notes = property(get_notes)
 
     def get_comments(self):
@@ -131,6 +134,7 @@ class Body:
             self.__comments = BodyItem()
             self.__comments.name = "comments"
         return self.__comments
+
     comments = property(get_comments)
 
     def append(self, name=None, lang=None):

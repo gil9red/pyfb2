@@ -1,8 +1,6 @@
 __author__ = 'ipetrash'
 
-
 """"""
-
 
 from pyfb2.author import Author
 from pyfb2.date import Date
@@ -49,18 +47,21 @@ class Document_Info:
         if not self.__program_used:
             self.__program_used = Program_Used()
         return self.__program_used
+
     program_used = property(get_program_used)
 
     def get_src_ocr(self):
         if not self.__src_ocr:
             self.__src_ocr = Src_Ocr()
         return self.__src_ocr
+
     src_ocr = property(get_src_ocr)
 
     def get_history(self):
         if not self.__history:
             self.__history = History()
         return self.__history
+
     history = property(get_history)
 
     def get_source(self):

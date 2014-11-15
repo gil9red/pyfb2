@@ -1,6 +1,5 @@
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -23,8 +22,8 @@ class Year:
     #
     # Пример использования
     # <publish-info>
-    #   <book-name>Долгин А.Б. Экономика символического обмена</book-name>
-    #   <publisher>Инфра-М</publisher>
+    # <book-name>Долгин А.Б. Экономика символического обмена</book-name>
+    # <publisher>Инфра-М</publisher>
     #   <city>Москва</city>
     #   <year>2006</year>
     #   <isbn>5-16-002911-7</isbn>

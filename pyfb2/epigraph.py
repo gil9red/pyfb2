@@ -7,7 +7,6 @@ from pyfb2.text_author import Text_Author
 
 __author__ = 'ipetrash'
 
-
 """"""
 
 
@@ -23,8 +22,8 @@ class Epigraph:
     # Подчиненные элементы
     # Содержит в перечисленном порядке элементы:
     # 1. Произвольный набор (в произвольном количестве)
-    #      <p>;
-    #      <poem>;
+    # <p>;
+    # <poem>;
     #      <cite>;
     #      <empty-line>;
     # 2. <text-author> 0..n (любое число, опционально).
