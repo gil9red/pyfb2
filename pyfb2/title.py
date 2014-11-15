@@ -1,11 +1,11 @@
+from pyfb2.empty_line import Empty_Line
+from pyfb2.paragraph import Paragraph
+
+
 __author__ = 'ipetrash'
 
 
 """"""
-
-
-from pyfb2.empty_line import Empty_Line
-from pyfb2.paragraph import Paragraph
 
 
 class Title:
@@ -35,26 +35,28 @@ class Title:
         self.lang = None
 
         # Cписок может содержать параграфы (<p>) и пустые строки (<empty-line>)
-        self.row_text = []
+        self.__row_text = []
 
     def append_paragraph(self, p=None):
         if p:
-            self.row_text.append(p)
+            self.__row_text.append(p)
         else:
             p = Paragraph()
-            self.row_text.append(p)
-        return p
+            self.__row_text.append(p)
+            return p
 
     def append_empty_line(self):
-        self.row_text.append(Empty_Line())
+        self.__row_text.append(Empty_Line())
 
     def get_source(self):
         source = '<title'
+
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
+
         source += '>'
 
-        for r in self.row_text:
+        for r in self.__row_text:
             source += r.get_source()
 
         source += '</title>'
