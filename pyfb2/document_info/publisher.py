@@ -63,11 +63,11 @@
 #     def get_source(self):
 #         # Список правообладателей необязательный, поэтому обойдемся
 #         # без выбрасывания исключения и просто выйдем, если список пуст
-#         if not self.list:
+#         if not __self.list:
 #             return ''
 #
 #         source = ''
-#         for p in self.list:
+#         for p in __self.list:
 #             source += p.get_source()
 #
 #         return source
