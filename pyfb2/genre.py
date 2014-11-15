@@ -4,19 +4,6 @@ __author__ = 'ipetrash'
 """"""
 
 
-# # TODO: может, список возможных жанров в перечислении описать?
-# # http://www.fictionbook.org/index.php/Жанры_FictionBook_2.1
-# # http://www.fictionbook.org/index.php/Eng:FictionBook_2.1_genres
-# from enum import Enum
-# class Genres(Enum):
-#     sf_history = "sf_history"
-#     sf_action = "sf_action"
-#     sf_epic = "sf_epic"
-#
-# print(Genres.sf_history.value)
-# print(type(Genres.sf_history.value))
-
-
 class GenreItem:
     """Описывает жанровую принадлежность книги. Используется для помещения
     книги в рубрикатор библиотеки, по этой причине список возможных жанров
@@ -58,18 +45,20 @@ class Genre:
     # TODO: доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
 
     def append(self, name, match=None):
-        self.list.append(GenreItem(name, match))
+        gi = GenreItem(name, match)
+        self.__list.append(gi)
+        return gi
 
     def get_source(self):
         # Список жанров должен иметь как минимум один жанр
-        if not self.list:
+        if not self.__list:
             raise NameError('Список жанров пуст.')
 
         source = ''
-        for g in self.list:
+        for g in self.__list:
             source += g.get_source()
 
         return source
