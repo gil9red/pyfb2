@@ -52,7 +52,7 @@ class Custom_Info:
     # TODO: доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
 
     def append(self, info_type, text):
         # TODO: желательно проверять наличие элемента с таким info_type
@@ -60,12 +60,12 @@ class Custom_Info:
         item = Custom_Info_Item()
         item.info_type = info_type
         item.text = text
-        self.list.append(item)
+        self.__list.append(item)
 
     def get_source(self):
         source = ''
 
-        for s in self.list:
+        for s in self.__list:
             source += s.get_source()
 
         return source
