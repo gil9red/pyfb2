@@ -51,14 +51,16 @@ class Sequence:
     # TODO: Доделать
 
     def __init__(self):
-        self.list = []
+        self.__list = []
 
     def append(self, name, number, lang=None):
-        self.list.append(SequenceItem(name, number, lang))
+        si = SequenceItem(name, number, lang)
+        self.__list.append(si)
+        return si
 
     def get_source(self):
         source = ''
-        for s in self.list:
+        for s in self.__list:
             source += s.get_source()
 
         return source
