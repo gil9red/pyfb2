@@ -1,4 +1,5 @@
 # TODO: 2.2 from publisher_doc_info import PublisherIte
+from pyfb2.fb2_genres import Genres
 from pyfb2.author import AuthorItem
 from pyfb2.translator import TranslatorItem
 from pyfb2.paragraph import Paragraph
@@ -33,8 +34,8 @@ if __name__ == '__main__':
     title_info.date.set_date(16, 11, 2014)
     title_info.sequence.append("Война и мир", 1)
     title_info.sequence.append("Горящий пукан школоты", 5, "ru")
-    title_info.genre.append("adv_western")
-    title_info.genre.append("detective", match=20)
+    title_info.genre.append(Genres.adv_western.value)
+    title_info.genre.append(Genres.detective.value, match=20)
 
     a = AuthorItem()
     a.first_name.text = "Ilya"
