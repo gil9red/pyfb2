@@ -116,6 +116,15 @@ if __name__ == '__main__':
     body.doc.title.append_paragraph(bdt_p)
     body.doc.title.append_empty_line()
     body.doc.title.append_paragraph(Paragraph('Текст после пустой строки'))
+    body.doc.title.append_paragraph().text = 'Текст после пустой строки [2]'
+
+    body.doc.epigraph.append_paragraph().text = '— Стой, кто идет?'
+    body.doc.epigraph.append_paragraph().text = '— Свои, с бутылкой!'
+    body.doc.epigraph.append_paragraph().text = '— Свои, проходи! Бутылка, стой!'
+    body.doc.epigraph.append_text_author().text = 'anekdotov.net'
+
+    # body.doc.section
+
 
     body.notes
     body.comments

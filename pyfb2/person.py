@@ -97,22 +97,22 @@ class Person:
     # TODO: доделать
 
     def __init__(self):
-        self.__list = []
+        self._list = []
         self.exteption_text_when_empty = None
 
     def append(self, person):
-        self.__list.append(person)
+        self._list.append(person)
 
     def get_source(self):
         if not self.exteption_text_when_empty:
             raise NameError("Нет текста для исключения при пустом списке.")
 
         # Список авторов должен иметь как минимум один элемент
-        if not self.__list:
+        if not self._list:
             raise NameError(self.exteption_text_when_empty)
 
         source = ''
-        for p in self.__list:
+        for p in self._list:
             source += p.get_source()
 
         return source

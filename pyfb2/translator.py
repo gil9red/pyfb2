@@ -37,11 +37,11 @@ class Translator(Person):
     def get_source(self):
         # Список переводчиков необязательный, поэтому обойдемся
         # без выбрасывания исключения и просто выйдем, если список пуст
-        if not self.__list:
+        if not self._list:
             return ''
 
         source = ''
-        for p in self.__list:
+        for p in self._list:
             source += p.get_source()
 
         return source
