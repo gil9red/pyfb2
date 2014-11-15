@@ -4,6 +4,7 @@ from pyfb2.paragraph import Paragraph
 from pyfb2.poem import Poem
 from pyfb2.subtitle import Subtitle
 
+
 __author__ = 'ipetrash'
 
 
@@ -50,25 +51,37 @@ class History:
 
         self.__list = []
 
-    def append_paragraph(self):
-        i = Paragraph()
-        self.__list.append(i)
-        return i
+    def append_paragraph(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Paragraph()
+            self.__list.append(p)
+            return p
 
-    def append_poem(self):
-        i = Poem()
-        self.__list.append(i)
-        return i
+    def append_poem(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Poem()
+            self.__list.append(p)
+            return p
 
-    def append_cite(self):
-        i = Cite()
-        self.__list.append(i)
-        return i
+    def append_cite(self, c=None):
+        if c:
+            self.__list.append(c)
+        else:
+            c = Cite()
+            self.__list.append(c)
+            return c
 
-    def append_subtitle(self):
-        i = Subtitle()
-        self.__list.append(i)
-        return i
+    def append_subtitle(self, st=None):
+        if st:
+            self.__list.append(st)
+        else:
+            st = Subtitle()
+            self.__list.append(st)
+            return st
 
     def append_empty_line(self):
         self.__list.append(Empty_Line())
@@ -82,6 +95,7 @@ class History:
             raise NameError('Нет содержимого тэга history.')
 
         source = '<history'
+
         if self.id:
             source += ' id="{}"'.format(self.id)
 
