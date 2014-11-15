@@ -1,4 +1,10 @@
+from pyfb2.cite import Cite
+from pyfb2.empty_line import Empty_Line
 from pyfb2.epigraph import Epigraph
+from pyfb2.image import Image
+from pyfb2.paragraph import Paragraph
+from pyfb2.poem import Poem
+from pyfb2.subtitle import Subtitle
 
 __author__ = 'ipetrash'
 
@@ -78,6 +84,53 @@ class Section:
             self.__sub_sections.append(s)
             return s
 
+    def append_paragraph(self, p=None):
+        if p:
+            self.__sub_elements.append(p)
+        else:
+            p = Paragraph()
+            self.__sub_elements.append(p)
+            return p
+
+    def append_image(self, im):
+        # TODO: автоматизировать: сразу добавлять в binary, если im не указан
+        self.__sub_elements.append(im)
+
+    def append_poem(self, p=None):
+        if p:
+            self.__sub_elements.append(p)
+        else:
+            p = Poem()
+            self.__sub_elements.append(p)
+            return p
+
+    def append_subtitle(self, s=None):
+        if s:
+            self.__sub_elements.append(s)
+        else:
+            s = Subtitle()
+            self.__sub_elements.append(s)
+            return s
+
+    def append_cite(self, c=None):
+        if c:
+            self.__sub_elements.append(c)
+        else:
+            c = Cite()
+            self.__sub_elements.append(c)
+            return c
+
+    def append_empty_line(self):
+        self.__sub_elements.append(Empty_Line())
+
+    # # TODO: 2.1
+    # def append_table(self, t=None):
+    #     if t:
+    #         self.__sub_elements.append(t)
+    #     else:
+    #         t = Table()
+    #         self.__sub_elements.append(t)
+    #         return t
 
     def get_source(self):
         # TODO: доделать
