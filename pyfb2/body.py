@@ -108,6 +108,23 @@ class BodyItem:
         return source
 
 
+class BodyNotesItem(BodyItem):
+    """"""
+
+    # TODO: доделать
+
+    def __init__(self):
+        super().__init__()
+
+        self.name = "notes"
+
+    def append(self, id_note, title, text):
+        s = self.section.append()
+        s.id = id_note
+        s.title.append_paragraph().text = title
+        s.append_paragraph().text = text
+
+
 class Body:
     """"""
 
@@ -123,8 +140,7 @@ class Body:
 
     def get_notes(self):
         if not self.__notes:
-            self.__notes = BodyItem()
-            self.__notes.name = "notes"
+            self.__notes = BodyNotesItem()
         return self.__notes
 
     notes = property(get_notes)
