@@ -134,10 +134,16 @@ if __name__ == '__main__':
     section2 = body.doc.section.append()
     section2.title.append_paragraph().text = 'Вторая глава'
     section2.append_paragraph().text = 'Фап-фап-фап...'
+    section2.append_paragraph().text = ('Какое-то непонятное слово <a xlink:href="#note_1" '
+                                        'type="note">[1]</a>, продолжение слова.')
+
+    body.notes.title.append_paragraph().text = "Примечания"
+    body.notes.append('note_1', '[1]', 'Примечание №1.')
 
 
-    body.notes
     body.comments
+
+
     body.append("custom")
 
 
