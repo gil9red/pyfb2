@@ -5,6 +5,7 @@ from pyfb2.stylesheet import Stylesheet
 from pyfb2.description import Description
 from pyfb2.body import Body
 from pyfb2.binary import Binary
+from xml.dom.minidom import parseString
 
 
 __author__ = 'ipetrash'
@@ -68,7 +69,10 @@ class FB2:
         source_fb2 += self.binary.get_source()
         source_fb2 += '</FictionBook>'
 
-        from xml.dom.minidom import parseString
-
         source_fb2 = parseString(source_fb2).toprettyxml(indent='  ')
         return source_fb2
+
+    def save(self, file_name):
+        with open(file_name, mode='w', encoding='utf-8') as f:
+            fb2_source = self.get_source()
+            f.write(fb2_source)
