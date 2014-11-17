@@ -147,7 +147,6 @@ if __name__ == '__main__':
     body.append("custom")
 
 
-    with open('pyfb2_test_fbdoc.fb2', mode='w', encoding='utf-8') as f:
-        fb2_source = book.get_source()
-        f.write(fb2_source)
-        print(fb2_source)
+    book.save('pyfb2_test_fbdoc.fb2')
+
+    print(book.get_source())
