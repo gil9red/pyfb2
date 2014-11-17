@@ -24,20 +24,19 @@ class Coverpage:
     # TODO: доделать
 
     def __init__(self):
-        self.images = []
+        self.__list = []
 
     def append(self, image):
-        self.images.append(image)
+        self.__list.append(image)
 
     def get_source(self):
-        if not self.images:
+        if not self.__list:
             raise NameError('Список изображений пуст.')
 
         source = '<coverpage>'
 
-        for im in self.images:
+        for im in self.__list:
             source += im.get_source()
 
         source += '</coverpage>'
-
         return source
