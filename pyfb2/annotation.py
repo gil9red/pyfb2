@@ -1,3 +1,9 @@
+from pyfb2.cite import Cite
+from pyfb2.empty_line import Empty_Line
+from pyfb2.paragraph import Paragraph
+from pyfb2.poem import Poem
+from pyfb2.subtitle import Subtitle
+
 __author__ = 'ipetrash'
 
 
@@ -54,10 +60,55 @@ class Annotation:
     def __init__(self):
         self.id = None  # (опционально)
         self.lang = None  # (опционально)
-        self.text = None
+
+        self.__list = []
+
+    def append_paragraph(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Paragraph()
+            self.__list.append(p)
+            return p
+
+    def append_poem(self, p=None):
+        if p:
+            self.__list.append(p)
+        else:
+            p = Poem()
+            self.__list.append(p)
+            return p
+
+    def append_cite(self, c=None):
+        if c:
+            self.__list.append(c)
+        else:
+            c = Cite()
+            self.__list.append(c)
+            return c
+
+    def append_subtitle(self, s=None):
+        if s:
+            self.__list.append(s)
+        else:
+            s = Subtitle()
+            self.__list.append(s)
+            return s
+
+    def append_empty_line(self):
+        self.__list.append(Empty_Line())
+
+    # TODO: 2.1
+    # def append_table(self, t=None):
+    #     if t:
+    #         self.__list.append(t)
+    #     else:
+    #         t = Table()
+    #         self.__list.append(t)
+    #         return t
 
     def get_source(self):
-        if not self.text:
+        if not self.__list:
             raise NameError('Нет содержимого тэга annotation.')
 
         source = '<annotation'
@@ -67,6 +118,9 @@ class Annotation:
         if self.lang:
             source += ' xml:lang="{}"'.format(self.lang)
         source += '>'
-        source += self.text
+
+        for i in self.__list:
+            source += i.get_source()
+
         source += '</annotation>'
         return source
