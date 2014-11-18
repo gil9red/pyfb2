@@ -5,6 +5,7 @@ from pyfb2.epigraph import Epigraph
 from pyfb2.image import Image
 from pyfb2.paragraph import Paragraph
 from pyfb2.poem import Poem
+from pyfb2.source_text import SourceText
 from pyfb2.subtitle import Subtitle
 from pyfb2.title import Title
 
@@ -127,6 +128,14 @@ class SectionItem:
 
     def append_empty_line(self):
         self.__sub_elements.append(Empty_Line())
+
+    def append_source_text(self, st=None):
+        if st:
+            self.__sub_elements.append(st)
+        else:
+            st = SourceText()
+            self.__sub_elements.append(st)
+            return st
 
     # # TODO: 2.1
     # def append_table(self, t=None):
