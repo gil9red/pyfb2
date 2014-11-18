@@ -33,6 +33,14 @@ class Translator(Person):
     def __init__(self):
         super().__init__()
 
+    def append(self, translator=None):
+        if translator:
+            self._list.append(translator)
+        else:
+            translator = TranslatorItem()
+            self._list.append(translator)
+            return translator
+
     def get_source(self):
         # Список переводчиков необязательный, поэтому обойдемся
         # без выбрасывания исключения и просто выйдем, если список пуст
