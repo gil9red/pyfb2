@@ -84,7 +84,8 @@ class Epigraph:
             return ta
 
     def get_source(self):
-        # TODO: если пустой, то возвращать пустую строку
+        if not self.__list and not self.__text_authors:
+            return ''
 
         source = '<epigraph'
 
