@@ -48,6 +48,9 @@ if __name__ == '__main__':
     a.id = "777"
     title_info.author.append(a)
 
+    author_2 = title_info.author.append()
+    author_2.first_name.text = "Blabla"
+
     t = TranslatorItem()
     t.first_name.text = "Vasya"
     t.last_name.text = "Pupkin"
