@@ -2,7 +2,6 @@ __author__ = 'ipetrash'
 
 """"""
 
-
 class Date:
     """"""
 
@@ -27,6 +26,11 @@ class Date:
         self.day = None
         self.month = None
         self.year = None
+
+    def set_date(self, date):
+        self.day = date.day
+        self.month = date.month
+        self.year = date.year
 
     def set_date(self, day, month, year):
         self.day = day
