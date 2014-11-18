@@ -31,3 +31,11 @@ class Author(Person):
         super().__init__()
 
         self.exteption_text_when_empty = 'Список автором пуст.'
+
+    def append(self, author=None):
+        if author:
+            self._list.append(author)
+        else:
+            author = AuthorItem()
+            self._list.append(author)
+            return author
