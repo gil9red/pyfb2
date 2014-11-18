@@ -60,6 +60,14 @@
 #     def __init__(self):
 #         super().__init__()
 #
+#     def append(self, publisher=None):
+#         if publisher:
+#             self._list.append(publisher)
+#         else:
+#             publisher = PublisherItem()
+#             self._list.append(publisher)
+#             return publisher
+#
 #     def get_source(self):
 #         # Список правообладателей необязательный, поэтому обойдемся
 #         # без выбрасывания исключения и просто выйдем, если список пуст
