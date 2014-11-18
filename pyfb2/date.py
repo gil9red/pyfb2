@@ -27,7 +27,7 @@ class Date:
         self.month = None
         self.year = None
 
-    def set_date(self, date):
+    def set_from_date(self, date):
         self.day = date.day
         self.month = date.month
         self.year = date.year
