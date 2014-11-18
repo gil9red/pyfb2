@@ -103,14 +103,6 @@ class Person:
         self._list = []
         self.exteption_text_when_empty = None
 
-    def append(self, person=None):
-        if person:
-            self._list.append(person)
-        else:
-            person = PersonItem()
-            self._list.append(person)
-            return person
-
     def get_source(self):
         if not self.exteption_text_when_empty:
             raise NameError("Нет текста для исключения при пустом списке.")
