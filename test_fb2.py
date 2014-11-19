@@ -130,8 +130,8 @@ if __name__ == '__main__':
     section1.title.append_paragraph().text = 'Первая глава'
     section1.append_paragraph().text = 'Первая строка главы...'
     section1.append_paragraph().text = 'Вторая строка главы...'
-    im = book.append_image(url='http://d.readmanga.ru/uploads/pics/00/46/014_o.jpg')
-    section1.append_image(im)
+    # im = book.append_image(url='http://d.readmanga.ru/uploads/pics/00/46/014_o.jpg')
+    # section1.append_image(im)
     section1.append_paragraph().text = 'Третья строка главы...'
 
     section2 = body.doc.section.append()
@@ -149,7 +149,7 @@ if __name__ == '__main__':
 
     body.append("custom")
 
-
     book.save('pyfb2_test_fbdoc.fb2')
+    book.save_to_zip('pyfb2_test_fbdoc.fb2')
 
     print(book.get_source())
