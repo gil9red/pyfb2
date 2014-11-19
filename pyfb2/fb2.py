@@ -6,7 +6,8 @@ from pyfb2.description import Description
 from pyfb2.body import Body
 from pyfb2.binary import Binary
 from xml.dom.minidom import parseString
-
+import zipfile
+from zipfile import ZipFile
 
 __author__ = 'ipetrash'
 
@@ -76,3 +77,9 @@ class FB2:
         with open(file_name, mode='w', encoding='utf-8') as f:
             fb2_source = self.get_source()
             f.write(fb2_source)
+
+    def save_to_zip(self, file_name):
+        self.save(file_name)
+
+        with ZipFile(file_name + '.zip', mode="w", compression=zipfile.ZIP_DEFLATED) as f:
+            f.write(file_name)
