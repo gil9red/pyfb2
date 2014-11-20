@@ -70,7 +70,9 @@ class FB2:
         source_fb2 += self.binary.get_source()
         source_fb2 += '</FictionBook>'
 
-        source_fb2 = parseString(source_fb2).toprettyxml(indent='  ')
+        xml_utf8 = parseString(source_fb2).toprettyxml(indent='  ', encoding='utf-8')
+        source_fb2 = xml_utf8.decode('utf-8')
+        # source_fb2 = parseString(source_fb2).toprettyxml(indent='  ')
         return source_fb2
 
     def save(self, file_name):
