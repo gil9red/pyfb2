@@ -101,7 +101,7 @@ class Image:
                 im_source = f.read()
 
         elif self.file_name:
-            with codecs.open(self.file_name) as f:
+            with codecs.open(self.file_name, 'rb') as f:
                 im_source = f.read()
         else:
             raise NameError('Не указан url или путь к файлу изображения.')
